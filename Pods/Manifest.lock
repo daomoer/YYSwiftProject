@@ -1,0 +1,32 @@
+PODS:
+  - ESTabBarController-swift (2.6.2)
+  - FSPagerView (0.7.1)
+  - IQKeyboardManagerSwift (6.0.3)
+  - Kingfisher (4.8.0)
+  - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.5)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - ESTabBarController-swift
+  - FSPagerView
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - SnapKit
+  - SVProgressHUD
+  - YYKit
+
+SPEC CHECKSUMS:
+  ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
+  FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: d4060ede147afbff42636ab1005b2b6e97f627a8
+
+COCOAPODS: 1.3.1
