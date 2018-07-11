@@ -12,6 +12,10 @@ def pods
     #banner滚动图片
     pod 'FSPagerView'
     pod 'IQKeyboardManagerSwift'
+    pod 'Moya'
+    pod 'HandyJSON'
+    pod 'SwiftMessages'
+
 
 end
 

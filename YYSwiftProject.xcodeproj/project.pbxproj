@@ -25,7 +25,7 @@
 		CFD006D720C633EA00DBC6E8 /* HHGuidePageHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006D420C633E900DBC6E8 /* HHGuidePageHUD.swift */; };
 		CFD006D820C633EA00DBC6E8 /* guide_btn_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFD006D520C633EA00DBC6E8 /* guide_btn_bg@2x.png */; };
 		CFD006D920C633EA00DBC6E8 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006D620C633EA00DBC6E8 /* UIImage+GIF.swift */; };
-		CFD006DB20C63F6700DBC6E8 /* YYFirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006DA20C63F6700DBC6E8 /* YYFirstController.swift */; };
+		CFD006DB20C63F6700DBC6E8 /* ECYController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006DA20C63F6700DBC6E8 /* ECYController.swift */; };
 		CFD006DD20C63F7700DBC6E8 /* YYSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006DC20C63F7700DBC6E8 /* YYSecondController.swift */; };
 		CFD006DF20C63F8D00DBC6E8 /* YYThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006DE20C63F8D00DBC6E8 /* YYThirdController.swift */; };
 		CFD006E120C63F9B00DBC6E8 /* YYFourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD006E020C63F9B00DBC6E8 /* YYFourController.swift */; };
@@ -36,6 +36,7 @@
 		CFD006ED20C66FA000DBC6E8 /* pic4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CFD006E920C66FA000DBC6E8 /* pic4.jpeg */; };
 		CFD006EE20C66FA000DBC6E8 /* pic1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CFD006EA20C66FA000DBC6E8 /* pic1.jpeg */; };
 		CFD006EF20C66FA000DBC6E8 /* pic2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CFD006EB20C66FA000DBC6E8 /* pic2.jpeg */; };
+		CFF79EC620F5AFCF0083DD9A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF79EC520F5AFCF0083DD9A /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,7 @@
 		CFD006D420C633E900DBC6E8 /* HHGuidePageHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHGuidePageHUD.swift; sourceTree = "<group>"; };
 		CFD006D520C633EA00DBC6E8 /* guide_btn_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_btn_bg@2x.png"; sourceTree = "<group>"; };
 		CFD006D620C633EA00DBC6E8 /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
-		CFD006DA20C63F6700DBC6E8 /* YYFirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYFirstController.swift; sourceTree = "<group>"; };
+		CFD006DA20C63F6700DBC6E8 /* ECYController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECYController.swift; sourceTree = "<group>"; };
 		CFD006DC20C63F7700DBC6E8 /* YYSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSecondController.swift; sourceTree = "<group>"; };
 		CFD006DE20C63F8D00DBC6E8 /* YYThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYThirdController.swift; sourceTree = "<group>"; };
 		CFD006E020C63F9B00DBC6E8 /* YYFourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYFourController.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		CFD006E920C66FA000DBC6E8 /* pic4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic4.jpeg; sourceTree = "<group>"; };
 		CFD006EA20C66FA000DBC6E8 /* pic1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpeg; sourceTree = "<group>"; };
 		CFD006EB20C66FA000DBC6E8 /* pic2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpeg; sourceTree = "<group>"; };
+		CFF79EC520F5AFCF0083DD9A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,16 +157,17 @@
 		CF5D06F120C6294000DA0F77 /* YYSwiftProject */ = {
 			isa = PBXGroup;
 			children = (
-				CFD006B720C6301C00DBC6E8 /* Resources */,
 				CF5D06F220C6294000DA0F77 /* AppDelegate.swift */,
 				CF5D06F420C6294000DA0F77 /* ViewController.swift */,
-				CFD006DA20C63F6700DBC6E8 /* YYFirstController.swift */,
+				CFF79EC720F5B6E00083DD9A /* 二次元 */,
 				CFD006DC20C63F7700DBC6E8 /* YYSecondController.swift */,
 				CFD006DE20C63F8D00DBC6E8 /* YYThirdController.swift */,
 				CFD006E020C63F9B00DBC6E8 /* YYFourController.swift */,
 				CFD006E220C63FA700DBC6E8 /* YYFiveController.swift */,
 				CFD006E420C6402800DBC6E8 /* YYBasicContentView.swift */,
 				CFD006E620C640AB00DBC6E8 /* YYBouncesContentView.swift */,
+				CFF79EC520F5AFCF0083DD9A /* Const.swift */,
+				CFD006B720C6301C00DBC6E8 /* Resources */,
 				CFD006AF20C62FC900DBC6E8 /* Librartys */,
 				CF5D06F620C6294000DA0F77 /* Main.storyboard */,
 				CF5D06F920C6294000DA0F77 /* Assets.xcassets */,
@@ -226,6 +229,14 @@
 				CFD006C620C6330D00DBC6E8 /* guideImage8.gif */,
 			);
 			path = HHGuidePageHUD;
+			sourceTree = "<group>";
+		};
+		CFF79EC720F5B6E00083DD9A /* 二次元 */ = {
+			isa = PBXGroup;
+			children = (
+				CFD006DA20C63F6700DBC6E8 /* ECYController.swift */,
+			);
+			path = "二次元";
 			sourceTree = "<group>";
 		};
 		EE5CD0B39DCC7B961B9706F9 /* Frameworks */ = {
@@ -406,22 +417,32 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YYSwiftProject/Pods-YYSwiftProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,8 +475,9 @@
 				CFD006DF20C63F8D00DBC6E8 /* YYThirdController.swift in Sources */,
 				CFD006D720C633EA00DBC6E8 /* HHGuidePageHUD.swift in Sources */,
 				CFD006E520C6402800DBC6E8 /* YYBasicContentView.swift in Sources */,
-				CFD006DB20C63F6700DBC6E8 /* YYFirstController.swift in Sources */,
+				CFD006DB20C63F6700DBC6E8 /* ECYController.swift in Sources */,
 				CFD006E120C63F9B00DBC6E8 /* YYFourController.swift in Sources */,
+				CFF79EC620F5AFCF0083DD9A /* Const.swift in Sources */,
 				CF5D06F520C6294000DA0F77 /* ViewController.swift in Sources */,
 				CFD006D920C633EA00DBC6E8 /* UIImage+GIF.swift in Sources */,
 				CFD006E320C63FA700DBC6E8 /* YYFiveController.swift in Sources */,

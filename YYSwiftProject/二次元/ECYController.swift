@@ -9,11 +9,10 @@
 import UIKit
 import FSPagerView
 
-class YYFirstController: UIViewController , FSPagerViewDelegate, FSPagerViewDataSource {
-    // this is the me first change
+class ECYController: UIViewController , FSPagerViewDelegate, FSPagerViewDataSource {
     
     ///////////////////////////////////////////banner 滚动图片\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    fileprivate let sectionTitles = ["https://github.com/WenchaoD/FSPagerView", "循环滚动banner图片", "多种样式可调", "有问题连接github连接原作者"]
+    fileprivate let sectionTitles = ["https://github.com/WenchaoD/FSPagerView", "循环滚动banner图片", "多种样式可调", "有问题连接github联系原作者"]
     fileprivate let configurationTitles = ["Automatic sliding","Infinite"]
     fileprivate let imageNames = ["pic1.jpeg","pic2.jpeg","pic3.jpeg","pic4.jpeg"]
     fileprivate var numberOfItems = 4
@@ -25,7 +24,7 @@ class YYFirstController: UIViewController , FSPagerViewDelegate, FSPagerViewData
         self.view.backgroundColor = UIColor.white
         
         ///////////////////////////////////////////banner 滚动图片\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        let pagerView = FSPagerView(frame: CGRect(x:0 , y:64 , width: self.view.frame.size.width , height: 220))
+        let pagerView = FSPagerView(frame: CGRect(x:0 , y:64 , width: YYScreenWidth , height: 220))
         pagerView.dataSource = self
         pagerView.delegate = self
         pagerView.automaticSlidingInterval = 1.5 - pagerView.automaticSlidingInterval
@@ -33,7 +32,7 @@ class YYFirstController: UIViewController , FSPagerViewDelegate, FSPagerViewData
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
         self.view.addSubview(pagerView)
         // Create a page control
-         self.pageControl = FSPageControl(frame: CGRect(x: 0, y: 254, width: self.view.frame.size.width, height: 30))
+         self.pageControl = FSPageControl(frame: CGRect(x: 0, y: 254, width: YYScreenWidth, height: 30))
         self.pageControl.numberOfPages = self.numberOfItems
         self.pageControl.contentHorizontalAlignment = .right
         self.view.addSubview(pageControl)
