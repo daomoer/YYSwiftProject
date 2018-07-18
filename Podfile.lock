@@ -5,6 +5,7 @@ PODS:
   - HandyJSON (4.1.1)
   - IQKeyboardManagerSwift (6.0.3)
   - Kingfisher (4.8.0)
+  - MJRefresh (3.1.15.3)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -16,6 +17,7 @@ PODS:
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
+  - SwipeMenuViewController (2.1.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -26,10 +28,12 @@ DEPENDENCIES:
   - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
+  - MJRefresh
   - Moya
   - SnapKit
   - SVProgressHUD
   - SwiftMessages
+  - SwipeMenuViewController
   - YYKit
 
 SPEC CHECKSUMS:
@@ -39,13 +43,15 @@ SPEC CHECKSUMS:
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  SwipeMenuViewController: 43c74a4167956e558ff375d4ac3b8d84c7c5485c
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 0d6a5211fcf59d8adaa21068b80e53110a306356
+PODFILE CHECKSUM: 011ae05cf756bc8ef71069bc17438c7446619f9e
 
 COCOAPODS: 1.3.1

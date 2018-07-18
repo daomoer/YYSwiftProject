@@ -52,13 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
      func customBouncesStyle() -> UINavigationController {
         let tabBarController = ESTabBarController()
-        let v1 = ECYController()
-        let v2 = YYSecondController()
+        let v1 = ACGViewController()
+        let v2 = U17Controller()
         let v3 = YYThirdController()
         let v4 = YYFourController()
         let v5 = YYFiveController()
         v1.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "二次元", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
-        v2.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Find", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
+        v2.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "有妖气", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
         v3.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Photo", image: UIImage(named: "photo"), selectedImage: UIImage(named: "photo_1"))
         v4.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Favor", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
         v5.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))

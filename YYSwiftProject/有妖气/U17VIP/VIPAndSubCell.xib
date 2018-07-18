@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VIPAndSubCell" customModule="YYSwiftProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic3.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="pyZ-O9-6cS">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="195"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="追星逐月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEd-q9-uC6">
+                        <rect key="frame" x="0.0" y="195" width="180" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Ngq-rd-PLj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pyZ-O9-6cS" secondAttribute="trailing" id="1VQ-1q-10E"/>
+                <constraint firstAttribute="bottom" secondItem="eEd-q9-uC6" secondAttribute="bottom" id="Ar6-Ik-cmS"/>
+                <constraint firstItem="eEd-q9-uC6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BU3-8d-1Pu"/>
+                <constraint firstItem="eEd-q9-uC6" firstAttribute="top" secondItem="pyZ-O9-6cS" secondAttribute="bottom" id="MMg-23-3Q3"/>
+                <constraint firstItem="eEd-q9-uC6" firstAttribute="top" secondItem="pyZ-O9-6cS" secondAttribute="bottom" id="OHI-fv-qMz"/>
+                <constraint firstItem="pyZ-O9-6cS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OTA-xA-hTH"/>
+                <constraint firstItem="pyZ-O9-6cS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Q0H-4r-gZi"/>
+                <constraint firstAttribute="trailing" secondItem="eEd-q9-uC6" secondAttribute="trailing" id="X22-hF-4Ix"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imageView" destination="pyZ-O9-6cS" id="yVz-hL-pt1"/>
+                <outlet property="titleLabel" destination="eEd-q9-uC6" id="sCW-8Z-MTc"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pic3.jpeg" width="2560" height="1707"/>
+    </resources>
+</document>

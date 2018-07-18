@@ -1,4 +1,4 @@
-platform:ios,'8.0'
+platform:ios,'9.0'
 inhibit_all_warnings!
 use_frameworks!
 
@@ -15,7 +15,9 @@ def pods
     pod 'Moya'
     pod 'HandyJSON'
     pod 'SwiftMessages'
-
+    # 分页
+    pod 'SwipeMenuViewController'
+    pod 'MJRefresh'
 
 end
 
