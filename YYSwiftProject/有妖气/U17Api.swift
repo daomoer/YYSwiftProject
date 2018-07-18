@@ -32,13 +32,16 @@ private  func _topVC(_ vc: UIViewController?) -> UIViewController? {
 
 let LoadingPlugin = NetworkActivityPlugin { (type, target) in
     guard let vc = topVC else { return }
-//    switch type {
-//    case .began:
-////        SVProgressHUD.hide(for: vc.view, animated: false)
-////        SVProgressHUD.showAdded(to: vc.view, animated: true)
-//    case .ended:
-////        SVProgressHUD.hide(for: vc.view, animated: true)
-//    }
+    switch type {
+    case .began:
+        SVProgressHUD.show()
+        
+//        SVProgressHUD.hide(for: vc.view, animated: false)
+//        SVProgressHUD.showAdded(to: vc.view, animated: true)
+    case .ended:
+//        SVProgressHUD.hide(for: vc.view, animated: true)
+        SVProgressHUD.dismiss()
+    }
 }
 
 let timeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider<UApi>.RequestResultClosure) -> Void in

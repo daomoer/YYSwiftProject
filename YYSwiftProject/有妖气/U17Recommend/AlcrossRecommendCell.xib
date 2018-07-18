@@ -58,6 +58,11 @@
                 <constraint firstItem="9y8-Rm-KVs" firstAttribute="top" secondItem="WOP-FN-xbL" secondAttribute="bottom" id="x41-hw-gpf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="mainTitleLabel" destination="9y8-Rm-KVs" id="cP9-0K-ST9"/>
+                <outlet property="picImage" destination="WOP-FN-xbL" id="xrV-jc-Oce"/>
+                <outlet property="subTitleLabel" destination="F7T-u0-BEB" id="kGa-iL-k4e"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

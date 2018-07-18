@@ -62,7 +62,10 @@ class IkonController: UIViewController , UICollectionViewDelegate, UICollectionV
             }
             
             self.gridView = RecommendGridView.init(frame: CGRect(x:0,y:350,width:YYScreenWidth,height:100))
-            self.gridView.titleArray = ["插画榜", "人气画师", "专题精选"]
+//            self.gridView.titleArray = ["插画榜", "人气画师", "专题精选"]
+            self.gridView.gridBtnClick = {(tag) in
+                print(tag)
+            }
             headerView.addSubview(self.gridView)
         }
         

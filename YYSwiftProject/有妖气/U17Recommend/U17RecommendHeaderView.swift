@@ -39,7 +39,7 @@ class U17RecommendHeaderView: UICollectionReusableView {
         
         self.addSubview(self.titleL)
         self.titleL.snp.makeConstraints { (make) in
-            make.width.equalTo(100)
+            make.width.equalTo(200)
             make.left.equalTo(40)
             make.height.equalTo(30)
             make.top.equalTo(5)

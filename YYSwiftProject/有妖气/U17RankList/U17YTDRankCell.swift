@@ -23,7 +23,6 @@ class U17YTDRankCell: UITableViewCell {
     
     func setUpUI(){
         self.addSubview(self.picView)
-        self.picView.image = UIImage(named:"pic1.jpeg")
         self.picView.snp.makeConstraints { (make) in
             make.width.equalTo(100)
             make.top.equalTo(10)
@@ -32,7 +31,6 @@ class U17YTDRankCell: UITableViewCell {
         }
         
         self.addSubview(self.mainTitle)
-        self.mainTitle.text = "镇魂街"
         self.mainTitle.font = UIFont.systemFont(ofSize: 16)
         self.mainTitle.snp.makeConstraints { (make) in
             make.height.equalTo(20)
@@ -42,7 +40,6 @@ class U17YTDRankCell: UITableViewCell {
         }
         
         self.addSubview(self.subTitle)
-        self.subTitle.text = "魔幻|许晨"
         self.subTitle.font = UIFont.systemFont(ofSize: 13)
         self.subTitle.textColor = UIColor.lightGray
         self.subTitle.snp.makeConstraints { (make) in
@@ -53,7 +50,6 @@ class U17YTDRankCell: UITableViewCell {
         }
         
         self.addSubview(self.desLabel)
-        self.desLabel.text = "都是雷锋精神的陆丰邻居啥的发牢骚的经费落实到来健身房时代峻峰伞带来邻居啥的雷锋精神的发蓝色的了即第三方接收到陆丰邻居啥的发牢骚的两家都是俯拾地芥"
         self.desLabel.numberOfLines = 0
         self.desLabel.textColor = UIColor.lightGray
         self.desLabel.font = UIFont.systemFont(ofSize: 13)
@@ -65,7 +61,6 @@ class U17YTDRankCell: UITableViewCell {
         }
         
         self.addSubview(self.headLabel)
-        self.headLabel.text = "热度 350万"
         self.headLabel.font = UIFont.systemFont(ofSize: 13)
         self.headLabel.textColor = UIColor.orange
         self.headLabel.snp.makeConstraints { (make) in
@@ -76,9 +71,9 @@ class U17YTDRankCell: UITableViewCell {
         }
         
         self.addSubview(self.rankImage)
-        self.rankImage.image = UIImage(named:"pic3.jpeg")
         self.rankImage.snp.makeConstraints { (make) in
-            make.width.height.equalTo(25)
+            make.width.equalTo(30)
+            make.height.equalTo(25)
             make.right.equalTo(self).offset(-10)
             make.bottom.equalTo(self).offset(-10)
         }
@@ -101,4 +96,36 @@ class U17YTDRankCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    var model: ComicModel? {
+        didSet {
+            guard let model = model else { return }
+            self.picView.kf.setImage(with: URL(string:model.cover!))
+            self.desLabel.text = model.description
+            self.mainTitle.text = model.name
+            var tagStr: String = ""
+            for tag in model.tags!{
+                tagStr = String(format:"%@ | %@",tag,tagStr)
+            }
+            self.subTitle.text = String(format:"%@%@",tagStr,model.author!)
+            let head = model.conTag
+            self.headLabel.text = "热度\(head)"
+        }
+    }
+    
+    var indexPath: IndexPath? {
+        didSet {
+            guard let indexPath = indexPath else { return }
+            switch indexPath.row {
+            case 0:
+                self.rankImage.image = UIImage(named:"rank_frist")
+            case 1:
+                self.rankImage.image = UIImage(named:"rank_second")
+            case 2:
+                self.rankImage.image = UIImage(named:"rank_third")
+            default:
+                self.rankImage.image = nil
+                break
+            }
+        }
+    }
 }

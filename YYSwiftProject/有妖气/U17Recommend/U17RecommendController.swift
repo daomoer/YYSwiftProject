@@ -9,6 +9,10 @@
 import UIKit
 
 class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+    private var galleryItems = [GalleryItemModel]()
+    private var TextItems = [TextItemModel]()
+    private var comicLists = [ComicListModel]()
+    
     private let AlcrossRecommendCellIdentifier = "AlcrossRecommendCell"
     private let VerticalRecommendCellIdentifier = "VerticalRecommendCell"
     private let U17RecommendTopicCellIdentifier = "U17RecommendTopicCell"
@@ -31,6 +35,9 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
         collection.register(U17RecommendHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: U17RecommendHeaderViewIdentifier)
         collection.register(U17FooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: U17FooterViewIdentifier)
         
+        
+        collection.uHead = URefreshHeader { [weak self] in self?.loadData() }
+        collection.uFoot = URefreshDiscoverFooter()
         return collection
     }()
 
@@ -38,10 +45,23 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
         self.view.addSubview(self.collectionView)
+        loadData()
+    }
+    
+    private func loadData(){
+        ApiLoadingProvider.request(UApi.boutiqueList(sexType: 1), model: BoutiqueListModel.self) { [weak self] (returnData) in
+            self?.galleryItems = returnData?.galleryItems ?? []
+            self?.TextItems = returnData?.textItems ?? []
+            self?.comicLists = returnData?.comicLists ?? []
+            
+            self?.collectionView.uHead.endRefreshing()
+            
+            self?.collectionView.reloadData()
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 11
+        return comicLists.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,25 +78,46 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let comicList = comicLists[indexPath.section]
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: U17BannerViewCellIdentifier, for: indexPath) as! U17BannerViewCell
+            cell.imagePaths = self.galleryItems.filter { $0.cover != nil }.map { $0.cover! }
+            cell.comicListModel = comicLists[indexPath.section]
+            cell.u17GridBtnClick = {[weak self](index) in
+                let model:ComicModel = comicList.comics![index]
+                
+                let vc = U17RankListViewController(argCon: model.argCon,
+                                                       argName: model.argName,
+                                                       argValue: model.argValue)
+                    vc.title = model.itemTitle
+                    self?.navigationController?.pushViewController(vc, animated: true)
+            }
             return cell
         } else if indexPath.section == 1 || indexPath.section == 2{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlcrossRecommendCellIdentifier, for: indexPath) as! AlcrossRecommendCell
+            cell.model = comicList.comics?[indexPath.row]
             cell.backgroundColor = UIColor.white
             return cell
         } else if indexPath.section == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: U17RecommendTopicCellIdentifier, for: indexPath) as! U17RecommendTopicCell
+            cell.model = comicList.comics?[indexPath.row]
             return cell
         }
         else if indexPath.section == 4 || indexPath.section == 6 || indexPath.section == 8 || indexPath.section == 9 || indexPath.section == 10{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalRecommendCellIdentifier, for: indexPath) as! VerticalRecommendCell
+            cell.model = comicList.comics?[indexPath.row]
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlcrossRecommendCellIdentifier, for: indexPath) as! AlcrossRecommendCell
             cell.backgroundColor = UIColor.white
+            cell.model = comicList.comics?[indexPath.row]
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = U17BooksViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //每个分区的内边距
@@ -97,7 +138,7 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
     //item 的尺寸
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if  indexPath.section == 0{
-            return CGSize.init(width:YYScreenWidth,height:240)
+            return CGSize.init(width:YYScreenWidth,height:260)
         }else if indexPath.section == 1 || indexPath.section == 2 {
             return CGSize.init(width:YYScreenWidth/2-3,height:150)
         }else if indexPath.section == 3{
@@ -124,6 +165,9 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
             let headerView : U17RecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: U17RecommendHeaderViewIdentifier, for: indexPath) as! U17RecommendHeaderView
+            let comicList = comicLists[indexPath.section]
+            headerView.imageView.kf.setImage(with:URL(string:comicList.newTitleIconUrl!))
+            headerView.titleL.text = comicList.itemTitle
             headerView.headerMoreBtnClick = {[weak self]() in
                 let bookVC = U17BooksViewController()
                 self?.navigationController?.pushViewController(bookVC, animated: true)

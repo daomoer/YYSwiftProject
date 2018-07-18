@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Kingfisher
+import HandyJSON
 
 let YYScreenWidth = UIScreen.main.bounds.size.width
 let YYScreenHeigth = UIScreen.main.bounds.size.height

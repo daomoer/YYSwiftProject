@@ -40,12 +40,7 @@ class U17Controller: SwipeMenuViewController {
         self.options.tabView.itemView.font = UIFont.systemFont(ofSize: 20)
         self.options.tabView.addition = .none
         self.swipeMenuView.reloadData(options: options)
-        
-        let lineView = UIView.init(frame: CGRect(x:0, y:64, width:YYScreenWidth, height:0.3))
-        lineView.backgroundColor = UIColor.lightGray
-        self.view.addSubview(lineView)
-        
-        
+                
         let button = UIButton.init(type:.custom)
         button.frame = CGRect(x:YYScreenWidth-60,y:20, width:40,height:40)
         button.setImage(UIImage(named:"search"), for: .normal)

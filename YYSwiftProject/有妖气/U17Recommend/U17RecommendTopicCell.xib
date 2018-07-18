@@ -31,6 +31,9 @@
                 <constraint firstAttribute="trailing" secondItem="cy6-rh-dvs" secondAttribute="trailing" id="lDI-cI-5wX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="picImage" destination="cy6-rh-dvs" id="KiI-zE-JV6"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

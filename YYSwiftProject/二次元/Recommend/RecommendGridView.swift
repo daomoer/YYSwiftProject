@@ -7,10 +7,20 @@
 //
 
 import UIKit
+// 创建闭包
+typealias GridBtnClick = (_ tag : Int) ->Void
+
 
 class RecommendGridView: UIView {
+    var gridBtnClick : GridBtnClick?
     
-    public var titleArray : NSArray = []{
+    open var titleArray: Array<String> = [] {
+        didSet {
+            
+        }
+    }
+    
+    open var btnImageArray: Array<String> = [] {
         didSet {
             setUpUI()
         }
@@ -30,46 +40,29 @@ class RecommendGridView: UIView {
 
         for index in 0..<titleArray.count {
             let button = UIButton.init(frame: CGRect(x:margin*CGFloat(index)*2+margin,y:10,width:margin,height:margin))
-            button.backgroundColor = UIColor.red
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = button.frame.width/2
+            button.kf.setImage(with: URL(string:btnImageArray[index]), for: UIControlState.normal)
             self.addSubview(button)
             
+            
             let label = UILabel()
-            label.backgroundColor = UIColor.purple
             label.textAlignment = .center
-            label.text = titleArray[index] as? String
+            label.text = titleArray[index]
+            label.font = UIFont.systemFont(ofSize: 15)
             self.addSubview(label)
             label.snp.makeConstraints({ (make) in
                 make.centerX.equalTo(button)
                 make.width.equalTo(margin+20)
                 make.top.equalTo(margin+10+5)
             })
- 
-            
-//            //分别设置图片下文字和点击方法
-//            switch index {
-//            case 0:
-//                label.text = "插画榜"
-//                button.addTarget(self, action: #selector(tapped1), for: UIControlEvents.touchUpInside)
-//            case 1:
-//                label.text = "人气画师"
-//                button.addTarget(self, action: #selector(tapped2), for: UIControlEvents.touchUpInside)
-//            default:
-//                label.text = "专题精选"
-//                button.addTarget(self, action: #selector(tapped3), for: UIControlEvents.touchUpInside)
-//            }
-
+            button.tag = index
+            button.addTarget(self, action: #selector(gridBtnClick(button:)), for: UIControlEvents.touchUpInside)
         }
     }
-//    @objc func tapped1() {
-//        print("111")
-//    }
-//    
-//    @objc func tapped2() {
-//        print("222")
-//    }
-//    
-//    @objc func tapped3() {
-//        print("333")
-//    }
-    
+    @objc func gridBtnClick(button:UIButton){
+        guard let gridBtnClick = gridBtnClick else { return }
+        gridBtnClick(button.tag)
+    }
+ 
 }

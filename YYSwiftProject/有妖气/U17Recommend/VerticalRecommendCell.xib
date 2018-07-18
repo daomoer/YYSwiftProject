@@ -57,6 +57,11 @@
                 <constraint firstAttribute="bottom" secondItem="c8h-aS-bxf" secondAttribute="bottom" id="t3Z-e2-sdn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="mainTitleLabel" destination="qlE-6z-rWN" id="l9i-4v-Gwb"/>
+                <outlet property="picImage" destination="9Xj-VQ-iT3" id="AI4-xI-tjz"/>
+                <outlet property="subTitleLabel" destination="c8h-aS-bxf" id="IWV-gM-DaA"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>
