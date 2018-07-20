@@ -65,7 +65,9 @@ class U17VIPController: UIViewController,UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = U17RankListViewController()
+        let comicList = vipList[indexPath.section]
+        guard let item = comicList.comics?[indexPath.row] else { return }
+        let vc = U17BooksViewController(comicid:item.comicId,titleStr:item.name)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -105,8 +107,12 @@ class U17VIPController: UIViewController,UICollectionViewDataSource, UICollectio
             headerView.titleL.text = comicList.itemTitle
             headerView.moreBtn.isHidden = !comicList.canMore
             headerView.headerMoreBtnClick = {[weak self]() in
-                let bookVC = U17BooksViewController()
-                self?.navigationController?.pushViewController(bookVC, animated: true)
+                let comicList:ComicListModel = (self?.vipList[indexPath.section])!
+                let vc = U17MoreBooksController(argCon: comicList.argCon,
+                                                argName:comicList.argName,
+                                                argValue:comicList.argValue)
+                vc.title = comicList.itemTitle
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
             return headerView
         }else if kind == UICollectionElementKindSectionFooter {

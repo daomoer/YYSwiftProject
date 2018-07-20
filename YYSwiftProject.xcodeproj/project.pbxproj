@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2CFA64A4868AD58EA34FF554 /* Pods_YYSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB172D293CA0EC85B017E1ED /* Pods_YYSwiftProject.framework */; };
+		CF0A72E2210186DB00CB6511 /* U17OtherBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */; };
+		CF0A72E4210189BD00CB6511 /* U17OtherWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */; };
+		CF0A72E62101CF3600CB6511 /* U17MoreBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */; };
 		CF21589120F85744007A4706 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21588F20F85744007A4706 /* RecommendCell.swift */; };
 		CF21589220F85744007A4706 /* RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF21589020F85744007A4706 /* RecommendCell.xib */; };
 		CF21589E20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21589B20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift */; };
@@ -16,6 +19,20 @@
 		CF269D5620F8986D002D12CE /* IkonBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF269D5520F8986D002D12CE /* IkonBannerView.swift */; };
 		CF269D5920F898E5002D12CE /* IkonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF269D5720F898E5002D12CE /* IkonCollectionCell.swift */; };
 		CF269D5A20F898E5002D12CE /* IkonCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF269D5820F898E5002D12CE /* IkonCollectionCell.xib */; };
+		CF33789921002CA100381606 /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33789321002CA100381606 /* WRNavigationBar.swift */; };
+		CF33789A21002CA100381606 /* WRCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33789421002CA100381606 /* WRCustomNavigationBar.swift */; };
+		CF33789B21002CA100381606 /* WRProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33789621002CA100381606 /* WRProxy.swift */; };
+		CF33789C21002CA100381606 /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33789721002CA100381606 /* WRCycleScrollView.swift */; };
+		CF33789D21002CA100381606 /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33789821002CA100381606 /* WRCycleCell.swift */; };
+		CF33789F21002E1300381606 /* YYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33789E21002E1300381606 /* YYNavigationController.swift */; };
+		CF3378A3210061E500381606 /* U17BooksHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378A2210061E500381606 /* U17BooksHeaderView.swift */; };
+		CF3378A5210073BA00381606 /* BookIntroduceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378A4210073BA00381606 /* BookIntroduceCell.swift */; };
+		CF3378A7210073E900381606 /* OtherBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378A6210073E900381606 /* OtherBooksCell.swift */; };
+		CF3378A92100740900381606 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378A82100740900381606 /* TicketCell.swift */; };
+		CF3378AB2100742200381606 /* GuessLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378AA2100742200381606 /* GuessLikeCell.swift */; };
+		CF3378B12100777B00381606 /* GuideCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378B02100777B00381606 /* GuideCollectionCell.swift */; };
+		CF3378B32100779000381606 /* GuideCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378B22100779000381606 /* GuideCollectionHeaderView.swift */; };
+		CF3378B52100816700381606 /* BooksCommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378B42100816700381606 /* BooksCommendCell.swift */; };
 		CF557F6720FC3549008EE5A1 /* RecommendBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF557F6620FC3549008EE5A1 /* RecommendBannerViewCell.swift */; };
 		CF557F6920FC3580008EE5A1 /* RecommendHotTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF557F6820FC3580008EE5A1 /* RecommendHotTopicCell.swift */; };
 		CF557F6B20FC359E008EE5A1 /* RecommendHotCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF557F6A20FC359E008EE5A1 /* RecommendHotCircleCell.swift */; };
@@ -278,7 +295,6 @@
 		CF5DEFDA20FF2A4C005E047E /* U17BooksDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFD920FF2A4C005E047E /* U17BooksDetailController.swift */; };
 		CF5DEFDC20FF2A7D005E047E /* U17BooksGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFDB20FF2A7D005E047E /* U17BooksGuideController.swift */; };
 		CF5DEFDE20FF2ABA005E047E /* U17BooksCommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFDD20FF2ABA005E047E /* U17BooksCommendController.swift */; };
-		CF5DEFE020FF2D55005E047E /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFDF20FF2D55005E047E /* TestController.swift */; };
 		CF5DEFE420FF40CA005E047E /* YYFiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFE120FF40CA005E047E /* YYFiveController.swift */; };
 		CF5DEFE520FF40CA005E047E /* YYFourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFE220FF40CA005E047E /* YYFourController.swift */; };
 		CF5DEFE620FF40CA005E047E /* YYThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFE320FF40CA005E047E /* YYThirdController.swift */; };
@@ -334,6 +350,9 @@
 		3F00A7445D8C5228F708139A /* Pods-YYSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftProject/Pods-YYSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		BBFCDDE6E725D5E33A27DD69 /* Pods-YYSwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftProject/Pods-YYSwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CB172D293CA0EC85B017E1ED /* Pods_YYSwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYSwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17OtherBooksController.swift; sourceTree = "<group>"; };
+		CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17OtherWorksCell.swift; sourceTree = "<group>"; };
+		CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17MoreBooksController.swift; sourceTree = "<group>"; };
 		CF21588F20F85744007A4706 /* RecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		CF21589020F85744007A4706 /* RecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCell.xib; sourceTree = "<group>"; };
 		CF21589B20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHeaderFooterFlowLayout.swift; sourceTree = "<group>"; };
@@ -342,6 +361,20 @@
 		CF269D5520F8986D002D12CE /* IkonBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkonBannerView.swift; sourceTree = "<group>"; };
 		CF269D5720F898E5002D12CE /* IkonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkonCollectionCell.swift; sourceTree = "<group>"; };
 		CF269D5820F898E5002D12CE /* IkonCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IkonCollectionCell.xib; sourceTree = "<group>"; };
+		CF33789321002CA100381606 /* WRNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
+		CF33789421002CA100381606 /* WRCustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCustomNavigationBar.swift; sourceTree = "<group>"; };
+		CF33789621002CA100381606 /* WRProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRProxy.swift; sourceTree = "<group>"; };
+		CF33789721002CA100381606 /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
+		CF33789821002CA100381606 /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
+		CF33789E21002E1300381606 /* YYNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavigationController.swift; sourceTree = "<group>"; };
+		CF3378A2210061E500381606 /* U17BooksHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17BooksHeaderView.swift; sourceTree = "<group>"; };
+		CF3378A4210073BA00381606 /* BookIntroduceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookIntroduceCell.swift; sourceTree = "<group>"; };
+		CF3378A6210073E900381606 /* OtherBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherBooksCell.swift; sourceTree = "<group>"; };
+		CF3378A82100740900381606 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
+		CF3378AA2100742200381606 /* GuessLikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessLikeCell.swift; sourceTree = "<group>"; };
+		CF3378B02100777B00381606 /* GuideCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionCell.swift; sourceTree = "<group>"; };
+		CF3378B22100779000381606 /* GuideCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionHeaderView.swift; sourceTree = "<group>"; };
+		CF3378B42100816700381606 /* BooksCommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCommendCell.swift; sourceTree = "<group>"; };
 		CF557F6620FC3549008EE5A1 /* RecommendBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBannerViewCell.swift; sourceTree = "<group>"; };
 		CF557F6820FC3580008EE5A1 /* RecommendHotTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendHotTopicCell.swift; sourceTree = "<group>"; };
 		CF557F6A20FC359E008EE5A1 /* RecommendHotCircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendHotCircleCell.swift; sourceTree = "<group>"; };
@@ -610,7 +643,6 @@
 		CF5DEFD920FF2A4C005E047E /* U17BooksDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17BooksDetailController.swift; sourceTree = "<group>"; };
 		CF5DEFDB20FF2A7D005E047E /* U17BooksGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17BooksGuideController.swift; sourceTree = "<group>"; };
 		CF5DEFDD20FF2ABA005E047E /* U17BooksCommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17BooksCommendController.swift; sourceTree = "<group>"; };
-		CF5DEFDF20FF2D55005E047E /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		CF5DEFE120FF40CA005E047E /* YYFiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYFiveController.swift; sourceTree = "<group>"; };
 		CF5DEFE220FF40CA005E047E /* YYFourController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYFourController.swift; sourceTree = "<group>"; };
 		CF5DEFE320FF40CA005E047E /* YYThirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYThirdController.swift; sourceTree = "<group>"; };
@@ -678,6 +710,59 @@
 				3F00A7445D8C5228F708139A /* Pods-YYSwiftProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF33789221002CA100381606 /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				CF33789321002CA100381606 /* WRNavigationBar.swift */,
+				CF33789421002CA100381606 /* WRCustomNavigationBar.swift */,
+				CF33789521002CA100381606 /* WRCycleScrollView */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		CF33789521002CA100381606 /* WRCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CF33789621002CA100381606 /* WRProxy.swift */,
+				CF33789721002CA100381606 /* WRCycleScrollView.swift */,
+				CF33789821002CA100381606 /* WRCycleCell.swift */,
+			);
+			path = WRCycleScrollView;
+			sourceTree = "<group>";
+		};
+		CF3378AC2100742D00381606 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				CF5DEFD920FF2A4C005E047E /* U17BooksDetailController.swift */,
+				CF3378A4210073BA00381606 /* BookIntroduceCell.swift */,
+				CF3378A6210073E900381606 /* OtherBooksCell.swift */,
+				CF3378A82100740900381606 /* TicketCell.swift */,
+				CF3378AA2100742200381606 /* GuessLikeCell.swift */,
+				CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */,
+				CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		CF3378AD2100772400381606 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				CF5DEFDB20FF2A7D005E047E /* U17BooksGuideController.swift */,
+				CF3378B02100777B00381606 /* GuideCollectionCell.swift */,
+				CF3378B22100779000381606 /* GuideCollectionHeaderView.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		CF3378AF2100774700381606 /* Commend */ = {
+			isa = PBXGroup;
+			children = (
+				CF5DEFDD20FF2ABA005E047E /* U17BooksCommendController.swift */,
+				CF3378B42100816700381606 /* BooksCommendCell.swift */,
+			);
+			path = Commend;
 			sourceTree = "<group>";
 		};
 		CF55813820FC6A1C008EE5A1 /* Resources */ = {
@@ -923,6 +1008,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA3D1A920F5E94400D25A73 /* U17RecommendController.swift */,
+				CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */,
 				CF55831C20FD86C8008EE5A1 /* U17BannerViewCell.swift */,
 				CF55830E20FD8413008EE5A1 /* U17RecommendHeaderView.swift */,
 				CF55831020FD846D008EE5A1 /* AlcrossRecommendCell.swift */,
@@ -998,11 +1084,11 @@
 		CF55833820FDED58008EE5A1 /* U17Books */ = {
 			isa = PBXGroup;
 			children = (
+				CF3378AF2100774700381606 /* Commend */,
+				CF3378AD2100772400381606 /* Guide */,
+				CF3378AC2100742D00381606 /* Details */,
 				CF55833920FDED7E008EE5A1 /* U17BooksViewController.swift */,
-				CF5DEFDF20FF2D55005E047E /* TestController.swift */,
-				CF5DEFD920FF2A4C005E047E /* U17BooksDetailController.swift */,
-				CF5DEFDB20FF2A7D005E047E /* U17BooksGuideController.swift */,
-				CF5DEFDD20FF2ABA005E047E /* U17BooksCommendController.swift */,
+				CF3378A2210061E500381606 /* U17BooksHeaderView.swift */,
 			);
 			path = U17Books;
 			sourceTree = "<group>";
@@ -1034,6 +1120,7 @@
 			children = (
 				CF5D06F220C6294000DA0F77 /* AppDelegate.swift */,
 				CF5D06F420C6294000DA0F77 /* ViewController.swift */,
+				CF33789E21002E1300381606 /* YYNavigationController.swift */,
 				CFF79EC720F5B6E00083DD9A /* 二次元 */,
 				CFA3D1A820F5DECC00D25A73 /* 有妖气 */,
 				CFD006E420C6402800DBC6E8 /* YYBasicContentView.swift */,
@@ -1139,6 +1226,7 @@
 		CFD006AF20C62FC900DBC6E8 /* Librartys */ = {
 			isa = PBXGroup;
 			children = (
+				CF33789221002CA100381606 /* WRNavigationBar */,
 				CFD006C420C632BD00DBC6E8 /* HHGuidePageHUD */,
 			);
 			path = Librartys;
@@ -1644,27 +1732,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF33789B21002CA100381606 /* WRProxy.swift in Sources */,
 				CFA3D1AE20F5E98300D25A73 /* U17SubController.swift in Sources */,
 				CF55833A20FDED7E008EE5A1 /* U17BooksViewController.swift in Sources */,
 				CF269D5620F8986D002D12CE /* IkonBannerView.swift in Sources */,
 				CF5DEFDC20FF2A7D005E047E /* U17BooksGuideController.swift in Sources */,
 				CF55832020FDC23D008EE5A1 /* VIPAndSubCell.swift in Sources */,
+				CF3378AB2100742200381606 /* GuessLikeCell.swift in Sources */,
+				CF0A72E2210186DB00CB6511 /* U17OtherBooksController.swift in Sources */,
+				CF3378A3210061E500381606 /* U17BooksHeaderView.swift in Sources */,
 				CFD006D720C633EA00DBC6E8 /* HHGuidePageHUD.swift in Sources */,
 				CF2158A020F8628F007A4706 /* YYLayoutHeaderFooterProtocol.swift in Sources */,
 				CFD006E520C6402800DBC6E8 /* YYBasicContentView.swift in Sources */,
+				CF33789921002CA100381606 /* WRNavigationBar.swift in Sources */,
 				CF21589E20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift in Sources */,
 				CF55833720FDDE11008EE5A1 /* URefresh.swift in Sources */,
 				CF557F6D20FC35E2008EE5A1 /* RecommendHotRecommCell.swift in Sources */,
+				CF0A72E4210189BD00CB6511 /* U17OtherWorksCell.swift in Sources */,
 				CF269D5920F898E5002D12CE /* IkonCollectionCell.swift in Sources */,
 				CFA3D1A320F5DD3000D25A73 /* IkonController.swift in Sources */,
 				CF55832C20FDD0F8008EE5A1 /* U17RankListViewController.swift in Sources */,
 				CF5DEFE520FF40CA005E047E /* YYFourController.swift in Sources */,
+				CF33789F21002E1300381606 /* YYNavigationController.swift in Sources */,
 				CF55832720FDC743008EE5A1 /* U17RankCell.swift in Sources */,
 				CFF79EC620F5AFCF0083DD9A /* Const.swift in Sources */,
 				CF557F7120FC4897008EE5A1 /* RecommendFooterView.swift in Sources */,
+				CF3378B52100816700381606 /* BooksCommendCell.swift in Sources */,
 				CF557F6F20FC488A008EE5A1 /* RecommendHeaderView.swift in Sources */,
+				CF3378B32100779000381606 /* GuideCollectionHeaderView.swift in Sources */,
+				CF33789C21002CA100381606 /* WRCycleScrollView.swift in Sources */,
 				CF55830F20FD8413008EE5A1 /* U17RecommendHeaderView.swift in Sources */,
 				CFA3D1A120F5DD1200D25A73 /* RecommendController.swift in Sources */,
+				CF3378A5210073BA00381606 /* BookIntroduceCell.swift in Sources */,
+				CF3378A7210073E900381606 /* OtherBooksCell.swift in Sources */,
 				CF55832E20FDD690008EE5A1 /* U17Model.swift in Sources */,
 				CF5DEFE420FF40CA005E047E /* YYFiveController.swift in Sources */,
 				CFA3D1B220F5FB1F00D25A73 /* U17SearchController.swift in Sources */,
@@ -1672,14 +1772,17 @@
 				CF55833020FDD6A2008EE5A1 /* U17Api.swift in Sources */,
 				CF5D06F520C6294000DA0F77 /* ViewController.swift in Sources */,
 				CF557F6720FC3549008EE5A1 /* RecommendBannerViewCell.swift in Sources */,
+				CF33789D21002CA100381606 /* WRCycleCell.swift in Sources */,
 				CFA3D1A520F5DD5200D25A73 /* EssayController.swift in Sources */,
 				CFA34B3720F734C000419D6A /* RecommendGridView.swift in Sources */,
 				CFA3D1AA20F5E94400D25A73 /* U17RecommendController.swift in Sources */,
 				CF21589F20F8628F007A4706 /* YYCollectionFlowLayout.swift in Sources */,
 				CF5DEFDA20FF2A4C005E047E /* U17BooksDetailController.swift in Sources */,
+				CF3378A92100740900381606 /* TicketCell.swift in Sources */,
 				CFA3D1B020F5E9A000D25A73 /* U17RankController.swift in Sources */,
 				CFD006D920C633EA00DBC6E8 /* UIImage+GIF.swift in Sources */,
 				CF55831220FD846D008EE5A1 /* AlcrossRecommendCell.swift in Sources */,
+				CF33789A21002CA100381606 /* WRCustomNavigationBar.swift in Sources */,
 				CF55831D20FD86C8008EE5A1 /* U17BannerViewCell.swift in Sources */,
 				CFA3D19D20F5CAC200D25A73 /* ACGViewController.swift in Sources */,
 				CF55831A20FD84C4008EE5A1 /* U17RecommendTopicCell.swift in Sources */,
@@ -1687,11 +1790,12 @@
 				CF5DEFDE20FF2ABA005E047E /* U17BooksCommendController.swift in Sources */,
 				CF5D06F320C6294000DA0F77 /* AppDelegate.swift in Sources */,
 				CF557F6920FC3580008EE5A1 /* RecommendHotTopicCell.swift in Sources */,
+				CF3378B12100777B00381606 /* GuideCollectionCell.swift in Sources */,
 				CF5DEFE620FF40CA005E047E /* YYThirdController.swift in Sources */,
 				CF55833C20FDFB7F008EE5A1 /* U17YTDRankCell.swift in Sources */,
+				CF0A72E62101CF3600CB6511 /* U17MoreBooksController.swift in Sources */,
 				CF21589120F85744007A4706 /* RecommendCell.swift in Sources */,
 				CFD006DD20C63F7700DBC6E8 /* U17Controller.swift in Sources */,
-				CF5DEFE020FF2D55005E047E /* TestController.swift in Sources */,
 				CFD006E720C640AB00DBC6E8 /* YYBouncesContentView.swift in Sources */,
 				CF55831620FD8493008EE5A1 /* VerticalRecommendCell.swift in Sources */,
 				CFA3D1AC20F5E96000D25A73 /* U17VIPController.swift in Sources */,

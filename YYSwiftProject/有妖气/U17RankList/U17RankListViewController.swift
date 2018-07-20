@@ -9,6 +9,7 @@
 import UIKit
 import HandyJSON
 
+// 排行榜界面
 class U17RankListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     private var argCon: Int = 0
     private var argName: String?
@@ -69,15 +70,24 @@ class U17RankListViewController: UIViewController,UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 165
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:U17YTDRankCell = tableView.dequeueReusableCell(withIdentifier: "U17YTDRankCell", for: indexPath) as! U17YTDRankCell
         cell.model = comicList[indexPath.row]
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.indexPath = indexPath
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = comicList[indexPath.row]
+        let vc = U17BooksViewController(comicid: model.comicId,titleStr:model.name)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

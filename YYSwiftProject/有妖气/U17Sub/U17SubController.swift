@@ -60,6 +60,13 @@ class U17SubController:UIViewController,UICollectionViewDataSource, UICollection
             cell.model = comicList.comics?[indexPath.row]
             return cell
         }
+    
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let comicList = subscribeList[indexPath.section]
+            guard let item = comicList.comics?[indexPath.row] else { return }
+            let vc = U17BooksViewController(comicid:item.comicId,titleStr:item.name)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
         //每个分区的内边距
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -97,8 +104,12 @@ class U17SubController:UIViewController,UICollectionViewDataSource, UICollection
                     headerView.titleL.text = comicList.itemTitle
                     headerView.moreBtn.isHidden = !comicList.canMore
                     headerView.headerMoreBtnClick = {[weak self]() in
-                        let bookVC = U17BooksViewController()
-                        self?.navigationController?.pushViewController(bookVC, animated: true)
+                        let comicList:ComicListModel = (self?.subscribeList[indexPath.section])!
+                        let vc = U17MoreBooksController(argCon: comicList.argCon,
+                                                        argName:comicList.argName,
+                                                        argValue:comicList.argValue)
+                        vc.title = comicList.itemTitle
+                        self?.navigationController?.pushViewController(vc, animated: true)
                     }
                 return headerView
             }else if kind == UICollectionElementKindSectionFooter {

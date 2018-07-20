@@ -32,8 +32,8 @@ class U17Controller: SwipeMenuViewController {
         
         self.view.backgroundColor = DominantColor
         self.options.tabView.style = .segmented
-        self.options.tabView.itemView.textColor = UIColor.lightGray
-        self.options.tabView.itemView.selectedTextColor = UIColor.black
+        self.options.tabView.itemView.textColor = UIColor.gray
+        self.options.tabView.itemView.selectedTextColor = UIColor.white
 //        self.options.tabView.backgroundColor = DominantColor
         self.options.tabView.itemView.width = 60.0
         self.options.tabView.margin = 70.0

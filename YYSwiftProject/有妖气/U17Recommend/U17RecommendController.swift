@@ -8,10 +8,12 @@
 
 import UIKit
 
+// 推荐界面
 class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     private var galleryItems = [GalleryItemModel]()
     private var TextItems = [TextItemModel]()
     private var comicLists = [ComicListModel]()
+
     
     private let AlcrossRecommendCellIdentifier = "AlcrossRecommendCell"
     private let VerticalRecommendCellIdentifier = "VerticalRecommendCell"
@@ -20,7 +22,6 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
     private let U17RecommendHeaderViewIdentifier = "U17RecommendHeaderView"
     private let U17FooterViewIdentifier = "U17FooterView"
 
-    
     
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
@@ -116,8 +117,14 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = U17BooksViewController()
+        if indexPath.section == 0 {
+            return
+        }else {
+        let comicList = comicLists[indexPath.section]
+        guard let item = comicList.comics?[indexPath.row] else { return }
+        let vc = U17BooksViewController(comicid:item.comicId,titleStr:item.name)
         self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     //每个分区的内边距
@@ -165,12 +172,32 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
             let headerView : U17RecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: U17RecommendHeaderViewIdentifier, for: indexPath) as! U17RecommendHeaderView
-            let comicList = comicLists[indexPath.section]
+            let comicList:ComicListModel = comicLists[indexPath.section]
             headerView.imageView.kf.setImage(with:URL(string:comicList.newTitleIconUrl!))
             headerView.titleL.text = comicList.itemTitle
+            // 每个分区header右侧点击更多按钮
             headerView.headerMoreBtnClick = {[weak self]() in
-                let bookVC = U17BooksViewController()
-                self?.navigationController?.pushViewController(bookVC, animated: true)
+                if indexPath.section == 2 {
+                    
+                }else if indexPath.section == 4 {
+                    
+                }else if indexPath.section == 5 {// 带前三名排行
+                    let comicList:ComicListModel = (self?.comicLists[indexPath.section])!
+                    let vc = U17RankListViewController(argCon: comicList.argCon,
+                                                       argName:comicList.argName,
+                                                       argValue:comicList.argValue)
+                    vc.title = comicList.itemTitle
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }else if indexPath.section == 6 {
+                    
+                }else {
+                    let comicList:ComicListModel = (self?.comicLists[indexPath.section])!
+                    let vc = U17MoreBooksController(argCon: comicList.argCon,
+                                                       argName:comicList.argName,
+                                                       argValue:comicList.argValue)
+                    vc.title = comicList.itemTitle
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             }
             return headerView
         }else if kind == UICollectionElementKindSectionFooter {

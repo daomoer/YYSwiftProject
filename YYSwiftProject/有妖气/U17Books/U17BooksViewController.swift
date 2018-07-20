@@ -8,12 +8,28 @@
 
 import UIKit
 import SwipeMenuViewController
+
 // 具体书本界面
 class U17BooksViewController: UIViewController {
+    private var comicid: Int = 0
+    private var titleStr: String?
+
+    
+    private var detailStatic: DetailStaticModel?
+    private var detailRealtime: DetailRealtimeModel?
+    private var guessLike: GuessLikeModel?
+    private var commentList: CommentListModel?
+
+    
     var dataSource:[String] = ["详情","目录","评价"]
     
+    lazy var headView : U17BooksHeaderView = {
+        let view = U17BooksHeaderView.init(frame:CGRect(x:0, y:0, width:YYScreenWidth, height:240))
+        return view
+    }()
+    
     lazy var swipeMenuView: SwipeMenuView = {
-        let swipeMenuView = SwipeMenuView.init(frame: CGRect(x:0, y:64, width: YYScreenWidth, height:YYScreenHeigth-64), options: self.options)
+        let swipeMenuView = SwipeMenuView.init(frame: CGRect(x:0, y:self.headView.frame.size.height, width: YYScreenWidth, height:YYScreenHeigth-64), options: self.options)
         swipeMenuView.dataSource = self
         swipeMenuView.delegate = self
         return swipeMenuView
@@ -33,60 +49,89 @@ class U17BooksViewController: UIViewController {
         return options
     }()
     
-    lazy var bigView : UIView = {
-        let view = UIView.init(frame:CGRect(x:0, y:0, width:YYScreenWidth, height:0))
-        view.backgroundColor = UIColor.red
-        return view
-    }()
-    
-    lazy var navView : UIView = {
-        let view = UIView.init(frame: CGRect(x:0, y:0, width: YYScreenWidth, height: 64))
-        view.backgroundColor = UIColor.black
-        return view
-    }()
-    
-    var vcs:[UIViewController] = [TestController(),U17BooksGuideController(),U17BooksCommendController()]
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        self.navigationController?.navigationBar.isHidden = false
+    convenience init(comicid: Int, titleStr: String?) {
+        self.init()
+        self.comicid = comicid
+        self.titleStr = titleStr
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(test), name: NSNotification.Name(rawValue:"isTest"), object: nil)
+        self.navBarBackgroundAlpha = 0
+        self.title = nil
+        self.view.backgroundColor = UIColor.white
+        NotificationCenter.default.addObserver(self, selector: #selector(move), name: NSNotification.Name(rawValue:"moveHeaderView"), object: nil)
         
-        for vc in vcs{
-            self.addChildViewController(vc)
+        NotificationCenter.default.addObserver(self, selector: #selector(upData), name: NSNotification.Name(rawValue:"OtherWorksComicid"), object: nil)
+        
+        loadData()
+    }
+    
+    private func loadData() {
+        
+        let grpup = DispatchGroup()
+        
+        grpup.enter()
+        ApiLoadingProvider.request(UApi.detailStatic(comicid: comicid),
+                                   model: DetailStaticModel.self) { [weak self] (detailStatic) in
+                                    self?.detailStatic = detailStatic
+                                    self?.headView.detailStatic = detailStatic?.comic
+                                    self?.titleStr = detailStatic?.comic?.name
+                                    ApiProvider.request(UApi.commentList(object_id: detailStatic?.comic?.comic_id ?? 0,
+                                                                         thread_id: detailStatic?.comic?.thread_id ?? 0,
+                                                                         page: -1),
+                                                        model: CommentListModel.self,
+                                                        completion: { [weak self] (commentList) in
+                                                            self?.commentList = commentList
+                                                            grpup.leave()
+                                    })
         }
-        self.view.backgroundColor = UIColor.green
-        self.view.addSubview(self.bigView)
-        self.view.addSubview(self.navView)
-        self.view.addSubview(self.swipeMenuView)
+        
+        grpup.enter()
+        ApiProvider.request(UApi.detailRealtime(comicid: comicid),
+                            model: DetailRealtimeModel.self) { [weak self] (returnData) in
+                                self?.detailRealtime = returnData
+                                self?.headView.detailRealtime = returnData?.comic
+                                grpup.leave()
+        }
+        
+        grpup.enter()
+        ApiProvider.request(UApi.guessLike, model: GuessLikeModel.self) { (returnData) in
+            self.guessLike = returnData
+            grpup.leave()
+        }
+        
+        grpup.notify(queue: DispatchQueue.main) {
+            self.view.addSubview(self.headView)
+            self.view.addSubview(self.swipeMenuView)
+            self.swipeMenuView.reloadData()
+        }
+    }
+    
+    @objc func upData(nofi : Notification){
+        self.comicid = nofi.userInfo!["Comicid"] as! Int
+        loadData()
     }
 
-    @objc func test(nofi : Notification){
-        let str:String = nofi.userInfo!["post"] as! String
-        if str == "向下" {
-            UIView.animate(withDuration: 0.25, animations: {
-                self.swipeMenuView.frame = CGRect(x:0, y:64, width:YYScreenWidth, height:YYScreenHeigth)
-                self.navView.frame = CGRect(x:0, y:0, width:YYScreenWidth, height:64)
-                self.bigView.frame = CGRect(x:0, y:0, width:YYScreenWidth, height:0)
-            })
-        }else {
-            UIView.animate(withDuration: 0.25, animations: {
-                self.swipeMenuView.frame = CGRect(x:0, y:240, width:YYScreenWidth, height:YYScreenHeigth)
-                self.navView.frame = CGRect(x:0, y:0, width:YYScreenWidth, height:0)
-                self.bigView.frame = CGRect(x:0, y:0, width:YYScreenWidth, height:240)
-            })
+    @objc func move(nofi : Notification){
+        let offsetY:CGFloat = nofi.userInfo!["post"] as! CGFloat
+        if offsetY>0 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.headView.frame = CGRect(x:0, y:-240, width:YYScreenWidth, height:240)
+                self.swipeMenuView.frame = CGRect(x:0, y:64, width: YYScreenWidth, height:YYScreenHeigth)
+                self.navBarBackgroundAlpha = offsetY
+                self.title = self.titleStr
+            }, completion: nil)
+        }else{
+            UIView.animate(withDuration: 0.5, animations: {
+                self.headView.frame = CGRect(x:0, y:0, width:YYScreenWidth, height:240)
+                self.swipeMenuView.frame = CGRect(x:0, y:self.headView.frame.size.height, width: YYScreenWidth, height:YYScreenHeigth)
+                self.navBarBackgroundAlpha = 0
+                self.title = nil
+            }, completion: nil)
         }
     }
+    
     
     deinit {
         /// 移除通知
@@ -107,10 +152,20 @@ extension U17BooksViewController: SwipeMenuViewDataSource {
     }
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
-        let vc = vcs[index]
-        return vc
+        if index == 0 {
+            let vc = U17BooksDetailController.init(comicid: self.comicid, detailStatic: self.detailStatic, detailRealtime: self.detailRealtime, guessLike: self.guessLike )
+            self.addChildViewController(vc)
+            return vc
+        }else if index == 1 {
+            let vc = U17BooksGuideController.init(comicid: self.comicid, detailStatic: self.detailStatic)
+            self.addChildViewController(vc)
+            return vc
+        }else {
+            let vc = U17BooksCommendController.init(comicid: self.comicid, commentList:self.commentList)
+            self.addChildViewController(vc)
+            return vc
+        }
     }
-    
 }
 
 

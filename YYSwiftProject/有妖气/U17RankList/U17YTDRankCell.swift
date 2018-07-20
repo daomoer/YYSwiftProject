@@ -41,7 +41,7 @@ class U17YTDRankCell: UITableViewCell {
         
         self.addSubview(self.subTitle)
         self.subTitle.font = UIFont.systemFont(ofSize: 13)
-        self.subTitle.textColor = UIColor.lightGray
+        self.subTitle.textColor = UIColor.gray
         self.subTitle.snp.makeConstraints { (make) in
             make.left.equalTo(self.mainTitle.snp.left)
             make.top.equalTo(self.mainTitle.snp.bottom).offset(10)
@@ -51,7 +51,7 @@ class U17YTDRankCell: UITableViewCell {
         
         self.addSubview(self.desLabel)
         self.desLabel.numberOfLines = 0
-        self.desLabel.textColor = UIColor.lightGray
+        self.desLabel.textColor = UIColor.gray
         self.desLabel.font = UIFont.systemFont(ofSize: 13)
         self.desLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.subTitle.snp.left)
@@ -65,7 +65,7 @@ class U17YTDRankCell: UITableViewCell {
         self.headLabel.textColor = UIColor.orange
         self.headLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.desLabel.snp.left)
-            make.width.equalTo(100)
+            make.width.equalTo(150)
             make.top.equalTo(self.desLabel.snp.bottom).offset(10)
             make.bottom.equalTo(self).offset(-10)
         }
@@ -95,7 +95,7 @@ class U17YTDRankCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+  // 分不同的类型，headLabel是显示热度
     var model: ComicModel? {
         didSet {
             guard let model = model else { return }
@@ -125,6 +125,58 @@ class U17YTDRankCell: UITableViewCell {
             default:
                 self.rankImage.image = nil
                 break
+            }
+        }
+    }
+    
+    // 分不同的类型，headLabel是显示更新时间
+    var updateModel: ComicModel? {
+        didSet {
+            guard let model = updateModel else { return }
+            self.picView.kf.setImage(with: URL(string:model.cover!))
+            self.desLabel.text = model.description
+            self.mainTitle.text = model.name
+            var tagStr: String = ""
+            for tag in model.tags!{
+                tagStr = String(format:"%@ | %@",tag,tagStr)
+            }
+            self.subTitle.text = String(format:"%@%@",tagStr,model.author!)
+        }
+    }
+    
+    var spinnerName : String? {
+        didSet {
+            guard let conTag = self.updateModel?.conTag else { return }
+            if spinnerName == "更新时间" {
+                let comicDate = Date().timeIntervalSince(Date(timeIntervalSince1970: TimeInterval(conTag)))
+                var tagString = ""
+                if comicDate < 60 {
+                    tagString = "\(Int(comicDate))秒前"
+                } else if comicDate < 3600 {
+                    tagString = "\(Int(comicDate / 60))分前"
+                } else if comicDate < 86400 {
+                    tagString = "\(Int(comicDate / 3600))小时前"
+                } else if comicDate < 31536000{
+                    tagString = "\(Int(comicDate / 86400))天前"
+                } else {
+                    tagString = "\(Int(comicDate / 31536000))年前"
+                }
+                self.headLabel.text = "更新时间\(tagString)"
+            }else {
+                let spinnerStr:String = spinnerName!
+                var tagString = ""
+                if conTag > 100000000 {
+                    tagString = String(format: "%.1f亿", Double(conTag) / 100000000)
+                } else if conTag > 10000 {
+                    tagString = String(format: "%.1f万", Double(conTag) / 10000)
+                } else {
+                    tagString = "\(conTag)"
+                }
+                if tagString != "0" {
+                    self.headLabel.text = "\(spinnerStr)\(tagString)"
+                }
+//            }else if spinnerName == "收藏量" {
+//
             }
         }
     }

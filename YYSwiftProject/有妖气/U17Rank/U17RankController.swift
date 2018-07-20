@@ -55,6 +55,15 @@ class U17RankController: UIViewController,UICollectionViewDataSource, UICollecti
             cell.model = rankList[indexPath.row]
             return cell
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = rankList[indexPath.row]
+        let vc = U17RankListViewController(argCon: model.argCon,
+                                          argName: model.argName,
+                                          argValue: model.argValue)
+        vc.title = "\(model.title!)榜"
+        navigationController?.pushViewController(vc, animated: true)
+    }
         
         //每个分区的内边距
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
