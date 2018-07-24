@@ -16,7 +16,7 @@ enum YYProvider {
         let tabBarController = ESTabBarController()
         let v1 = U17TodayViewController()
         let v2 = U17Controller()
-        let v3 = YYFourController()
+        let v3 = U17BookRackController()
         let v4 = U17MineViewController()
         
         v1.tabBarItem = ESTabBarItem.init(YYBasicContentView(), title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))

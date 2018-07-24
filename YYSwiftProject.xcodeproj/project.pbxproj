@@ -17,9 +17,7 @@
 		CF0A72E2210186DB00CB6511 /* U17OtherBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */; };
 		CF0A72E4210189BD00CB6511 /* U17OtherWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */; };
 		CF0A72E62101CF3600CB6511 /* U17MoreBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */; };
-		CF1537A92106C6D200165E9F /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537A62106C6D200165E9F /* ParallaxHeaderMode.swift */; };
-		CF1537AA2106C6D200165E9F /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537A72106C6D200165E9F /* UIScrollView+ParallaxHeader.swift */; };
-		CF1537AB2106C6D200165E9F /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537A82106C6D200165E9F /* ParallaxHeader.swift */; };
+		CF1537B72106EA7B00165E9F /* U17BookRackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537B62106EA7B00165E9F /* U17BookRackController.swift */; };
 		CF1F92FB21058379001C16C5 /* U17TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */; };
 		CF1F92FE21058948001C16C5 /* U17TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F92FD21058948001C16C5 /* U17TodayCell.swift */; };
 		CF1F930221059D7C001C16C5 /* U17TodayFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F930121059D7C001C16C5 /* U17TodayFooterView.swift */; };
@@ -381,9 +379,7 @@
 		CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17OtherBooksController.swift; sourceTree = "<group>"; };
 		CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17OtherWorksCell.swift; sourceTree = "<group>"; };
 		CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17MoreBooksController.swift; sourceTree = "<group>"; };
-		CF1537A62106C6D200165E9F /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
-		CF1537A72106C6D200165E9F /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
-		CF1537A82106C6D200165E9F /* ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
+		CF1537B62106EA7B00165E9F /* U17BookRackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17BookRackController.swift; sourceTree = "<group>"; };
 		CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayViewController.swift; sourceTree = "<group>"; };
 		CF1F92FD21058948001C16C5 /* U17TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayCell.swift; sourceTree = "<group>"; };
 		CF1F930121059D7C001C16C5 /* U17TodayFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayFooterView.swift; sourceTree = "<group>"; };
@@ -768,15 +764,13 @@
 		CF029BB02104804300BE195C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CF1537B42106E9F800165E9F /* TabBarView */,
 				CF029BA521042AF500BE195C /* YYProvider.swift */,
 				CF33789E21002E1300381606 /* YYNavigationController.swift */,
-				CFD006E420C6402800DBC6E8 /* YYBasicContentView.swift */,
-				CFD006E620C640AB00DBC6E8 /* YYBouncesContentView.swift */,
 				CF5DEFE120FF40CA005E047E /* YYFiveController.swift */,
 				CF5DEFE220FF40CA005E047E /* YYFourController.swift */,
 				CF5DEFE320FF40CA005E047E /* YYThirdController.swift */,
 				CF029BA721042BF600BE195C /* YYSecondViewController.swift */,
-				CF029BB5210482C100BE195C /* YYIrregularityContentView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -789,26 +783,101 @@
 			path = "喜马拉雅";
 			sourceTree = "<group>";
 		};
-		CF1537A52106C6D200165E9F /* ParallaxHeader */ = {
+		CF1537AE2106DBA800165E9F /* U17Find-发现 */ = {
 			isa = PBXGroup;
 			children = (
-				CF1537A62106C6D200165E9F /* ParallaxHeaderMode.swift */,
-				CF1537A72106C6D200165E9F /* UIScrollView+ParallaxHeader.swift */,
-				CF1537A82106C6D200165E9F /* ParallaxHeader.swift */,
+				CFD006DC20C63F7700DBC6E8 /* U17Controller.swift */,
+				CF55832A20FDD0B5008EE5A1 /* U17RankList */,
+				CF55833820FDED58008EE5A1 /* U17Books */,
+				CF55830920FD8372008EE5A1 /* U17Recommend-推荐 */,
+				CF55830A20FD8382008EE5A1 /* U17VIP */,
+				CF55830B20FD8394008EE5A1 /* U17Sub-订阅 */,
+				CF55830C20FD83A5008EE5A1 /* U17Rank-排行 */,
 			);
-			path = ParallaxHeader;
+			path = "U17Find-发现";
 			sourceTree = "<group>";
 		};
-		CF1F92FC2105837E001C16C5 /* U17Today */ = {
+		CF1537AF2106DBE400165E9F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */,
 				CF1F92FD21058948001C16C5 /* U17TodayCell.swift */,
 				CF1F930121059D7C001C16C5 /* U17TodayFooterView.swift */,
 				CF1F930321059E83001C16C5 /* U17TodayHeaderView.swift */,
 				CF1F93052105A501001C16C5 /* U17TodayFooterCell.swift */,
 			);
-			path = U17Today;
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF1537B02106DC0B00165E9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF85C0732105E1EA00A740ED /* U17MineCell.swift */,
+				CF85C0752105E27400A740ED /* U17MineHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF1537B12106DC3200165E9F /* U17BookRack-书架 */ = {
+			isa = PBXGroup;
+			children = (
+				CF1537B62106EA7B00165E9F /* U17BookRackController.swift */,
+				CF55830D20FD83B4008EE5A1 /* U17Search */,
+			);
+			path = "U17BookRack-书架";
+			sourceTree = "<group>";
+		};
+		CF1537B22106E95700165E9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFA34B3620F734C000419D6A /* RecommendGridView.swift */,
+				CF55831C20FD86C8008EE5A1 /* U17BannerViewCell.swift */,
+				CF55830E20FD8413008EE5A1 /* U17RecommendHeaderView.swift */,
+				CF55831020FD846D008EE5A1 /* AlcrossRecommendCell.swift */,
+				CF55831120FD846D008EE5A1 /* AlcrossRecommendCell.xib */,
+				CF55831420FD8493008EE5A1 /* VerticalRecommendCell.swift */,
+				CF55831520FD8493008EE5A1 /* VerticalRecommendCell.xib */,
+				CF55831820FD84C4008EE5A1 /* U17RecommendTopicCell.swift */,
+				CF55831920FD84C4008EE5A1 /* U17RecommendTopicCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF1537B32106E96F00165E9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF55831E20FDC23D008EE5A1 /* VIPAndSubCell.swift */,
+				CF55831F20FDC23D008EE5A1 /* VIPAndSubCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF1537B42106E9F800165E9F /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				CFD006E420C6402800DBC6E8 /* YYBasicContentView.swift */,
+				CFD006E620C640AB00DBC6E8 /* YYBouncesContentView.swift */,
+				CF029BB5210482C100BE195C /* YYIrregularityContentView.swift */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		CF1537B52106EA3900165E9F /* U17Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF55832820FDCC08008EE5A1 /* U17FooterView.swift */,
+				CF55832D20FDD690008EE5A1 /* U17Model.swift */,
+				CF55832F20FDD6A2008EE5A1 /* U17Api.swift */,
+			);
+			path = U17Main;
+			sourceTree = "<group>";
+		};
+		CF1F92FC2105837E001C16C5 /* U17Today-今日 */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */,
+				CF1537AF2106DBE400165E9F /* View */,
+			);
+			path = "U17Today-今日";
 			sourceTree = "<group>";
 		};
 		CF33789221002CA100381606 /* WRNavigationBar */ = {
@@ -831,7 +900,7 @@
 			path = WRCycleScrollView;
 			sourceTree = "<group>";
 		};
-		CF3378AC2100742D00381606 /* Details */ = {
+		CF3378AC2100742D00381606 /* Details-详情 */ = {
 			isa = PBXGroup;
 			children = (
 				CF5DEFD920FF2A4C005E047E /* U17BooksDetailController.swift */,
@@ -842,10 +911,10 @@
 				CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */,
 				CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */,
 			);
-			path = Details;
+			path = "Details-详情";
 			sourceTree = "<group>";
 		};
-		CF3378AD2100772400381606 /* Guide */ = {
+		CF3378AD2100772400381606 /* Guide-目录 */ = {
 			isa = PBXGroup;
 			children = (
 				CF5DEFDB20FF2A7D005E047E /* U17BooksGuideController.swift */,
@@ -854,16 +923,16 @@
 				CF4E26D22102E394009C0F57 /* U17ReadViewController.swift */,
 				CF4E26D42102E640009C0F57 /* U17ReadCell.swift */,
 			);
-			path = Guide;
+			path = "Guide-目录";
 			sourceTree = "<group>";
 		};
-		CF3378AF2100774700381606 /* Commend */ = {
+		CF3378AF2100774700381606 /* Commend-评价 */ = {
 			isa = PBXGroup;
 			children = (
 				CF5DEFDD20FF2ABA005E047E /* U17BooksCommendController.swift */,
 				CF3378B42100816700381606 /* BooksCommendCell.swift */,
 			);
-			path = Commend;
+			path = "Commend-评价";
 			sourceTree = "<group>";
 		};
 		CF55813820FC6A1C008EE5A1 /* Resources */ = {
@@ -1105,49 +1174,41 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CF55830920FD8372008EE5A1 /* U17Recommend */ = {
+		CF55830920FD8372008EE5A1 /* U17Recommend-推荐 */ = {
 			isa = PBXGroup;
 			children = (
+				CF1537B22106E95700165E9F /* View */,
 				CFA3D1A920F5E94400D25A73 /* U17RecommendController.swift */,
 				CF4E26D02102DFCC009C0F57 /* U17WebViewController.swift */,
 				CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */,
-				CF55831C20FD86C8008EE5A1 /* U17BannerViewCell.swift */,
-				CF55830E20FD8413008EE5A1 /* U17RecommendHeaderView.swift */,
-				CF55831020FD846D008EE5A1 /* AlcrossRecommendCell.swift */,
-				CF55831120FD846D008EE5A1 /* AlcrossRecommendCell.xib */,
-				CF55831420FD8493008EE5A1 /* VerticalRecommendCell.swift */,
-				CF55831520FD8493008EE5A1 /* VerticalRecommendCell.xib */,
-				CF55831820FD84C4008EE5A1 /* U17RecommendTopicCell.swift */,
-				CF55831920FD84C4008EE5A1 /* U17RecommendTopicCell.xib */,
 			);
-			path = U17Recommend;
+			path = "U17Recommend-推荐";
 			sourceTree = "<group>";
 		};
 		CF55830A20FD8382008EE5A1 /* U17VIP */ = {
 			isa = PBXGroup;
 			children = (
+				CF1537B32106E96F00165E9F /* View */,
 				CFA3D1AB20F5E95F00D25A73 /* U17VIPController.swift */,
-				CF55831E20FDC23D008EE5A1 /* VIPAndSubCell.swift */,
-				CF55831F20FDC23D008EE5A1 /* VIPAndSubCell.xib */,
 			);
 			path = U17VIP;
 			sourceTree = "<group>";
 		};
-		CF55830B20FD8394008EE5A1 /* U17Sub */ = {
+		CF55830B20FD8394008EE5A1 /* U17Sub-订阅 */ = {
 			isa = PBXGroup;
 			children = (
 				CFA3D1AD20F5E98300D25A73 /* U17SubController.swift */,
 			);
-			path = U17Sub;
+			path = "U17Sub-订阅";
 			sourceTree = "<group>";
 		};
-		CF55830C20FD83A5008EE5A1 /* U17Rank */ = {
+		CF55830C20FD83A5008EE5A1 /* U17Rank-排行 */ = {
 			isa = PBXGroup;
 			children = (
 				CFA3D1AF20F5E9A000D25A73 /* U17RankController.swift */,
 				CF55832620FDC743008EE5A1 /* U17RankCell.swift */,
 			);
-			path = U17Rank;
+			path = "U17Rank-排行";
 			sourceTree = "<group>";
 		};
 		CF55830D20FD83B4008EE5A1 /* U17Search */ = {
@@ -1186,9 +1247,9 @@
 		CF55833820FDED58008EE5A1 /* U17Books */ = {
 			isa = PBXGroup;
 			children = (
-				CF3378AF2100774700381606 /* Commend */,
-				CF3378AD2100772400381606 /* Guide */,
-				CF3378AC2100742D00381606 /* Details */,
+				CF3378AF2100774700381606 /* Commend-评价 */,
+				CF3378AD2100772400381606 /* Guide-目录 */,
+				CF3378AC2100742D00381606 /* Details-详情 */,
 				CF55833920FDED7E008EE5A1 /* U17BooksViewController.swift */,
 				CF3378A2210061E500381606 /* U17BooksHeaderView.swift */,
 			);
@@ -1256,21 +1317,19 @@
 			path = YYSwiftProjectUITests;
 			sourceTree = "<group>";
 		};
-		CF85C0702105E0B100A740ED /* U17Mine */ = {
+		CF85C0702105E0B100A740ED /* U17Mine-我的 */ = {
 			isa = PBXGroup;
 			children = (
 				CF85C0712105E0C700A740ED /* U17MineViewController.swift */,
-				CF85C0732105E1EA00A740ED /* U17MineCell.swift */,
-				CF85C0752105E27400A740ED /* U17MineHeaderView.swift */,
+				CF1537B02106DC0B00165E9F /* View */,
 			);
-			path = U17Mine;
+			path = "U17Mine-我的";
 			sourceTree = "<group>";
 		};
 		CFA34B3020F7234400419D6A /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
 				CFA3D1A020F5DD1200D25A73 /* RecommendController.swift */,
-				CFA34B3620F734C000419D6A /* RecommendGridView.swift */,
 				CF21588F20F85744007A4706 /* RecommendCell.swift */,
 				CF21589020F85744007A4706 /* RecommendCell.xib */,
 				CF557F6620FC3549008EE5A1 /* RecommendBannerViewCell.swift */,
@@ -1316,19 +1375,11 @@
 		CFA3D1A820F5DECC00D25A73 /* 有妖气 */ = {
 			isa = PBXGroup;
 			children = (
-				CFD006DC20C63F7700DBC6E8 /* U17Controller.swift */,
-				CF55832820FDCC08008EE5A1 /* U17FooterView.swift */,
-				CF55832D20FDD690008EE5A1 /* U17Model.swift */,
-				CF55832F20FDD6A2008EE5A1 /* U17Api.swift */,
-				CF85C0702105E0B100A740ED /* U17Mine */,
-				CF1F92FC2105837E001C16C5 /* U17Today */,
-				CF55833820FDED58008EE5A1 /* U17Books */,
-				CF55832A20FDD0B5008EE5A1 /* U17RankList */,
-				CF55830920FD8372008EE5A1 /* U17Recommend */,
-				CF55830A20FD8382008EE5A1 /* U17VIP */,
-				CF55830B20FD8394008EE5A1 /* U17Sub */,
-				CF55830C20FD83A5008EE5A1 /* U17Rank */,
-				CF55830D20FD83B4008EE5A1 /* U17Search */,
+				CF1537B52106EA3900165E9F /* U17Main */,
+				CF1F92FC2105837E001C16C5 /* U17Today-今日 */,
+				CF1537AE2106DBA800165E9F /* U17Find-发现 */,
+				CF1537B12106DC3200165E9F /* U17BookRack-书架 */,
+				CF85C0702105E0B100A740ED /* U17Mine-我的 */,
 			);
 			path = "有妖气";
 			sourceTree = "<group>";
@@ -1336,7 +1387,6 @@
 		CFD006AF20C62FC900DBC6E8 /* Librartys */ = {
 			isa = PBXGroup;
 			children = (
-				CF1537A52106C6D200165E9F /* ParallaxHeader */,
 				CF029BA92104334200BE195C /* yh_navgation */,
 				CF33789221002CA100381606 /* WRNavigationBar */,
 				CFD006C420C632BD00DBC6E8 /* HHGuidePageHUD */,
@@ -1849,6 +1899,7 @@
 				CF029BA621042AF500BE195C /* YYProvider.swift in Sources */,
 				CF33789B21002CA100381606 /* WRProxy.swift in Sources */,
 				CFA3D1AE20F5E98300D25A73 /* U17SubController.swift in Sources */,
+				CF1537B72106EA7B00165E9F /* U17BookRackController.swift in Sources */,
 				CF55833A20FDED7E008EE5A1 /* U17BooksViewController.swift in Sources */,
 				CF269D5620F8986D002D12CE /* IkonBannerView.swift in Sources */,
 				CF5DEFDC20FF2A7D005E047E /* U17BooksGuideController.swift in Sources */,
@@ -1867,7 +1918,6 @@
 				CF0A72E4210189BD00CB6511 /* U17OtherWorksCell.swift in Sources */,
 				CF269D5920F898E5002D12CE /* IkonCollectionCell.swift in Sources */,
 				CFA3D1A320F5DD3000D25A73 /* IkonController.swift in Sources */,
-				CF1537AA2106C6D200165E9F /* UIScrollView+ParallaxHeader.swift in Sources */,
 				CF55832C20FDD0F8008EE5A1 /* U17RankListViewController.swift in Sources */,
 				CF5DEFE520FF40CA005E047E /* YYFourController.swift in Sources */,
 				CF33789F21002E1300381606 /* YYNavigationController.swift in Sources */,
@@ -1891,7 +1941,6 @@
 				CF55832E20FDD690008EE5A1 /* U17Model.swift in Sources */,
 				CF1F92FB21058379001C16C5 /* U17TodayViewController.swift in Sources */,
 				CF5DEFE420FF40CA005E047E /* YYFiveController.swift in Sources */,
-				CF1537AB2106C6D200165E9F /* ParallaxHeader.swift in Sources */,
 				CFA3D1B220F5FB1F00D25A73 /* U17SearchController.swift in Sources */,
 				CF557F6B20FC359E008EE5A1 /* RecommendHotCircleCell.swift in Sources */,
 				CF55833020FDD6A2008EE5A1 /* U17Api.swift in Sources */,
@@ -1904,7 +1953,6 @@
 				CFA34B3720F734C000419D6A /* RecommendGridView.swift in Sources */,
 				CFA3D1AA20F5E94400D25A73 /* U17RecommendController.swift in Sources */,
 				CF029BB4210480D700BE195C /* XMLYViewController.swift in Sources */,
-				CF1537A92106C6D200165E9F /* ParallaxHeaderMode.swift in Sources */,
 				CF21589F20F8628F007A4706 /* YYCollectionFlowLayout.swift in Sources */,
 				CF5DEFDA20FF2A4C005E047E /* U17BooksDetailController.swift in Sources */,
 				CF3378A92100740900381606 /* TicketCell.swift in Sources */,
