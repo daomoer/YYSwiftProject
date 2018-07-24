@@ -99,6 +99,43 @@ struct DetailStaticModel: HandyJSON {
     var otherWorks: [OtherWorkModel]?
 }
 
+struct DayDataModel : HandyJSON {
+    var dayDataList : [DayItemDataListModel]?
+}
+
+struct DayItemDataListModel : HandyJSON {
+    var dayItemDataList : [DayItemModel]?
+    var weekDay: String?
+    var timeStamp: String?
+}
+
+struct DayItemModel : HandyJSON {
+    var htmlId:Int = 0
+    var comicListTitle : String?
+    var btnColor: Int = 0
+    var cover : String?
+    var dataType: Int = 0
+    var shortDescription :String?
+    var longDescription : String?
+    var threadId: Int = 0
+    var type: Int = 0
+    var isComicCanRead: Bool = false
+    var comicId: Int = 0
+    var comicName: String?
+    var tags: [Any]?
+    var comicCover: String?
+    var dayComicItemList:[dayComicItemModel]?
+}
+
+struct dayComicItemModel: HandyJSON {
+    var name : String?
+    var comicId: Int = 0
+    var cover : String?
+    var tags :[Any]?
+    var chapterCount: Int = 0
+}
+
+
 struct ComicRealtimeModel: HandyJSON {
     var comic_id: Int = 0
     var user_id: Int = 0

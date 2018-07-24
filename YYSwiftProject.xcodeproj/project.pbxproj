@@ -8,9 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2CFA64A4868AD58EA34FF554 /* Pods_YYSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB172D293CA0EC85B017E1ED /* Pods_YYSwiftProject.framework */; };
+		CF029BA621042AF500BE195C /* YYProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF029BA521042AF500BE195C /* YYProvider.swift */; };
+		CF029BA821042BF600BE195C /* YYSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF029BA721042BF600BE195C /* YYSecondViewController.swift */; };
+		CF029BAE2104334200BE195C /* UINavigationBar+YHIndicatorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CF029BAA2104334200BE195C /* UINavigationBar+YHIndicatorImage.m */; };
+		CF029BAF2104334200BE195C /* UINavigationController+YHBackTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF029BAD2104334200BE195C /* UINavigationController+YHBackTitle.m */; };
+		CF029BB4210480D700BE195C /* XMLYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF029BB3210480D700BE195C /* XMLYViewController.swift */; };
+		CF029BB6210482C100BE195C /* YYIrregularityContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF029BB5210482C100BE195C /* YYIrregularityContentView.swift */; };
 		CF0A72E2210186DB00CB6511 /* U17OtherBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */; };
 		CF0A72E4210189BD00CB6511 /* U17OtherWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */; };
 		CF0A72E62101CF3600CB6511 /* U17MoreBooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */; };
+		CF1537A92106C6D200165E9F /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537A62106C6D200165E9F /* ParallaxHeaderMode.swift */; };
+		CF1537AA2106C6D200165E9F /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537A72106C6D200165E9F /* UIScrollView+ParallaxHeader.swift */; };
+		CF1537AB2106C6D200165E9F /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1537A82106C6D200165E9F /* ParallaxHeader.swift */; };
+		CF1F92FB21058379001C16C5 /* U17TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */; };
+		CF1F92FE21058948001C16C5 /* U17TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F92FD21058948001C16C5 /* U17TodayCell.swift */; };
+		CF1F930221059D7C001C16C5 /* U17TodayFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F930121059D7C001C16C5 /* U17TodayFooterView.swift */; };
+		CF1F930421059E83001C16C5 /* U17TodayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F930321059E83001C16C5 /* U17TodayHeaderView.swift */; };
+		CF1F93062105A501001C16C5 /* U17TodayFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F93052105A501001C16C5 /* U17TodayFooterCell.swift */; };
 		CF21589120F85744007A4706 /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21588F20F85744007A4706 /* RecommendCell.swift */; };
 		CF21589220F85744007A4706 /* RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF21589020F85744007A4706 /* RecommendCell.xib */; };
 		CF21589E20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21589B20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift */; };
@@ -33,6 +47,9 @@
 		CF3378B12100777B00381606 /* GuideCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378B02100777B00381606 /* GuideCollectionCell.swift */; };
 		CF3378B32100779000381606 /* GuideCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378B22100779000381606 /* GuideCollectionHeaderView.swift */; };
 		CF3378B52100816700381606 /* BooksCommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3378B42100816700381606 /* BooksCommendCell.swift */; };
+		CF4E26D12102DFCC009C0F57 /* U17WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E26D02102DFCC009C0F57 /* U17WebViewController.swift */; };
+		CF4E26D32102E394009C0F57 /* U17ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E26D22102E394009C0F57 /* U17ReadViewController.swift */; };
+		CF4E26D52102E640009C0F57 /* U17ReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E26D42102E640009C0F57 /* U17ReadCell.swift */; };
 		CF557F6720FC3549008EE5A1 /* RecommendBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF557F6620FC3549008EE5A1 /* RecommendBannerViewCell.swift */; };
 		CF557F6920FC3580008EE5A1 /* RecommendHotTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF557F6820FC3580008EE5A1 /* RecommendHotTopicCell.swift */; };
 		CF557F6B20FC359E008EE5A1 /* RecommendHotCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF557F6A20FC359E008EE5A1 /* RecommendHotCircleCell.swift */; };
@@ -298,6 +315,9 @@
 		CF5DEFE420FF40CA005E047E /* YYFiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFE120FF40CA005E047E /* YYFiveController.swift */; };
 		CF5DEFE520FF40CA005E047E /* YYFourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFE220FF40CA005E047E /* YYFourController.swift */; };
 		CF5DEFE620FF40CA005E047E /* YYThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DEFE320FF40CA005E047E /* YYThirdController.swift */; };
+		CF85C0722105E0C700A740ED /* U17MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C0712105E0C700A740ED /* U17MineViewController.swift */; };
+		CF85C0742105E1EA00A740ED /* U17MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C0732105E1EA00A740ED /* U17MineCell.swift */; };
+		CF85C0762105E27400A740ED /* U17MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85C0752105E27400A740ED /* U17MineHeaderView.swift */; };
 		CFA34B3720F734C000419D6A /* RecommendGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA34B3620F734C000419D6A /* RecommendGridView.swift */; };
 		CFA3D19D20F5CAC200D25A73 /* ACGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3D19C20F5CAC200D25A73 /* ACGViewController.swift */; };
 		CFA3D1A120F5DD1200D25A73 /* RecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA3D1A020F5DD1200D25A73 /* RecommendController.swift */; };
@@ -350,9 +370,25 @@
 		3F00A7445D8C5228F708139A /* Pods-YYSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftProject/Pods-YYSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		BBFCDDE6E725D5E33A27DD69 /* Pods-YYSwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftProject/Pods-YYSwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CB172D293CA0EC85B017E1ED /* Pods_YYSwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYSwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF029BA521042AF500BE195C /* YYProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYProvider.swift; sourceTree = "<group>"; };
+		CF029BA721042BF600BE195C /* YYSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSecondViewController.swift; sourceTree = "<group>"; };
+		CF029BAA2104334200BE195C /* UINavigationBar+YHIndicatorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+YHIndicatorImage.m"; sourceTree = "<group>"; };
+		CF029BAB2104334200BE195C /* UINavigationController+YHBackTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YHBackTitle.h"; sourceTree = "<group>"; };
+		CF029BAC2104334200BE195C /* UINavigationBar+YHIndicatorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+YHIndicatorImage.h"; sourceTree = "<group>"; };
+		CF029BAD2104334200BE195C /* UINavigationController+YHBackTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YHBackTitle.m"; sourceTree = "<group>"; };
+		CF029BB3210480D700BE195C /* XMLYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLYViewController.swift; sourceTree = "<group>"; };
+		CF029BB5210482C100BE195C /* YYIrregularityContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYIrregularityContentView.swift; sourceTree = "<group>"; };
 		CF0A72E1210186DB00CB6511 /* U17OtherBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17OtherBooksController.swift; sourceTree = "<group>"; };
 		CF0A72E3210189BD00CB6511 /* U17OtherWorksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17OtherWorksCell.swift; sourceTree = "<group>"; };
 		CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17MoreBooksController.swift; sourceTree = "<group>"; };
+		CF1537A62106C6D200165E9F /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
+		CF1537A72106C6D200165E9F /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
+		CF1537A82106C6D200165E9F /* ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
+		CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayViewController.swift; sourceTree = "<group>"; };
+		CF1F92FD21058948001C16C5 /* U17TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayCell.swift; sourceTree = "<group>"; };
+		CF1F930121059D7C001C16C5 /* U17TodayFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayFooterView.swift; sourceTree = "<group>"; };
+		CF1F930321059E83001C16C5 /* U17TodayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayHeaderView.swift; sourceTree = "<group>"; };
+		CF1F93052105A501001C16C5 /* U17TodayFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17TodayFooterCell.swift; sourceTree = "<group>"; };
 		CF21588F20F85744007A4706 /* RecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
 		CF21589020F85744007A4706 /* RecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCell.xib; sourceTree = "<group>"; };
 		CF21589B20F8628F007A4706 /* YYHeaderFooterFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHeaderFooterFlowLayout.swift; sourceTree = "<group>"; };
@@ -375,6 +411,9 @@
 		CF3378B02100777B00381606 /* GuideCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionCell.swift; sourceTree = "<group>"; };
 		CF3378B22100779000381606 /* GuideCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionHeaderView.swift; sourceTree = "<group>"; };
 		CF3378B42100816700381606 /* BooksCommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCommendCell.swift; sourceTree = "<group>"; };
+		CF4E26D02102DFCC009C0F57 /* U17WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17WebViewController.swift; sourceTree = "<group>"; };
+		CF4E26D22102E394009C0F57 /* U17ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17ReadViewController.swift; sourceTree = "<group>"; };
+		CF4E26D42102E640009C0F57 /* U17ReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17ReadCell.swift; sourceTree = "<group>"; };
 		CF557F6620FC3549008EE5A1 /* RecommendBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBannerViewCell.swift; sourceTree = "<group>"; };
 		CF557F6820FC3580008EE5A1 /* RecommendHotTopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendHotTopicCell.swift; sourceTree = "<group>"; };
 		CF557F6A20FC359E008EE5A1 /* RecommendHotCircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendHotCircleCell.swift; sourceTree = "<group>"; };
@@ -646,6 +685,9 @@
 		CF5DEFE120FF40CA005E047E /* YYFiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYFiveController.swift; sourceTree = "<group>"; };
 		CF5DEFE220FF40CA005E047E /* YYFourController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYFourController.swift; sourceTree = "<group>"; };
 		CF5DEFE320FF40CA005E047E /* YYThirdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYThirdController.swift; sourceTree = "<group>"; };
+		CF85C0712105E0C700A740ED /* U17MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17MineViewController.swift; sourceTree = "<group>"; };
+		CF85C0732105E1EA00A740ED /* U17MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17MineCell.swift; sourceTree = "<group>"; };
+		CF85C0752105E27400A740ED /* U17MineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = U17MineHeaderView.swift; sourceTree = "<group>"; };
 		CFA34B3620F734C000419D6A /* RecommendGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendGridView.swift; sourceTree = "<group>"; };
 		CFA3D19C20F5CAC200D25A73 /* ACGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACGViewController.swift; sourceTree = "<group>"; };
 		CFA3D1A020F5DD1200D25A73 /* RecommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendController.swift; sourceTree = "<group>"; };
@@ -712,6 +754,63 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CF029BA92104334200BE195C /* yh_navgation */ = {
+			isa = PBXGroup;
+			children = (
+				CF029BAC2104334200BE195C /* UINavigationBar+YHIndicatorImage.h */,
+				CF029BAA2104334200BE195C /* UINavigationBar+YHIndicatorImage.m */,
+				CF029BAB2104334200BE195C /* UINavigationController+YHBackTitle.h */,
+				CF029BAD2104334200BE195C /* UINavigationController+YHBackTitle.m */,
+			);
+			path = yh_navgation;
+			sourceTree = "<group>";
+		};
+		CF029BB02104804300BE195C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF029BA521042AF500BE195C /* YYProvider.swift */,
+				CF33789E21002E1300381606 /* YYNavigationController.swift */,
+				CFD006E420C6402800DBC6E8 /* YYBasicContentView.swift */,
+				CFD006E620C640AB00DBC6E8 /* YYBouncesContentView.swift */,
+				CF5DEFE120FF40CA005E047E /* YYFiveController.swift */,
+				CF5DEFE220FF40CA005E047E /* YYFourController.swift */,
+				CF5DEFE320FF40CA005E047E /* YYThirdController.swift */,
+				CF029BA721042BF600BE195C /* YYSecondViewController.swift */,
+				CF029BB5210482C100BE195C /* YYIrregularityContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CF029BB22104809100BE195C /* 喜马拉雅 */ = {
+			isa = PBXGroup;
+			children = (
+				CF029BB3210480D700BE195C /* XMLYViewController.swift */,
+			);
+			path = "喜马拉雅";
+			sourceTree = "<group>";
+		};
+		CF1537A52106C6D200165E9F /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CF1537A62106C6D200165E9F /* ParallaxHeaderMode.swift */,
+				CF1537A72106C6D200165E9F /* UIScrollView+ParallaxHeader.swift */,
+				CF1537A82106C6D200165E9F /* ParallaxHeader.swift */,
+			);
+			path = ParallaxHeader;
+			sourceTree = "<group>";
+		};
+		CF1F92FC2105837E001C16C5 /* U17Today */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F92FA21058379001C16C5 /* U17TodayViewController.swift */,
+				CF1F92FD21058948001C16C5 /* U17TodayCell.swift */,
+				CF1F930121059D7C001C16C5 /* U17TodayFooterView.swift */,
+				CF1F930321059E83001C16C5 /* U17TodayHeaderView.swift */,
+				CF1F93052105A501001C16C5 /* U17TodayFooterCell.swift */,
+			);
+			path = U17Today;
+			sourceTree = "<group>";
+		};
 		CF33789221002CA100381606 /* WRNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +851,8 @@
 				CF5DEFDB20FF2A7D005E047E /* U17BooksGuideController.swift */,
 				CF3378B02100777B00381606 /* GuideCollectionCell.swift */,
 				CF3378B22100779000381606 /* GuideCollectionHeaderView.swift */,
+				CF4E26D22102E394009C0F57 /* U17ReadViewController.swift */,
+				CF4E26D42102E640009C0F57 /* U17ReadCell.swift */,
 			);
 			path = Guide;
 			sourceTree = "<group>";
@@ -1008,6 +1109,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA3D1A920F5E94400D25A73 /* U17RecommendController.swift */,
+				CF4E26D02102DFCC009C0F57 /* U17WebViewController.swift */,
 				CF0A72E52101CF3600CB6511 /* U17MoreBooksController.swift */,
 				CF55831C20FD86C8008EE5A1 /* U17BannerViewCell.swift */,
 				CF55830E20FD8413008EE5A1 /* U17RecommendHeaderView.swift */,
@@ -1120,15 +1222,11 @@
 			children = (
 				CF5D06F220C6294000DA0F77 /* AppDelegate.swift */,
 				CF5D06F420C6294000DA0F77 /* ViewController.swift */,
-				CF33789E21002E1300381606 /* YYNavigationController.swift */,
-				CFF79EC720F5B6E00083DD9A /* 二次元 */,
-				CFA3D1A820F5DECC00D25A73 /* 有妖气 */,
-				CFD006E420C6402800DBC6E8 /* YYBasicContentView.swift */,
-				CFD006E620C640AB00DBC6E8 /* YYBouncesContentView.swift */,
-				CF5DEFE120FF40CA005E047E /* YYFiveController.swift */,
-				CF5DEFE220FF40CA005E047E /* YYFourController.swift */,
-				CF5DEFE320FF40CA005E047E /* YYThirdController.swift */,
 				CFF79EC520F5AFCF0083DD9A /* Const.swift */,
+				CF029BB02104804300BE195C /* Main */,
+				CFA3D1A820F5DECC00D25A73 /* 有妖气 */,
+				CFF79EC720F5B6E00083DD9A /* 二次元 */,
+				CF029BB22104809100BE195C /* 喜马拉雅 */,
 				CF55833120FDDDEC008EE5A1 /* CommonUI */,
 				CF55813820FC6A1C008EE5A1 /* Resources */,
 				CFD006AF20C62FC900DBC6E8 /* Librartys */,
@@ -1156,6 +1254,16 @@
 				CF5D071420C6294000DA0F77 /* Info.plist */,
 			);
 			path = YYSwiftProjectUITests;
+			sourceTree = "<group>";
+		};
+		CF85C0702105E0B100A740ED /* U17Mine */ = {
+			isa = PBXGroup;
+			children = (
+				CF85C0712105E0C700A740ED /* U17MineViewController.swift */,
+				CF85C0732105E1EA00A740ED /* U17MineCell.swift */,
+				CF85C0752105E27400A740ED /* U17MineHeaderView.swift */,
+			);
+			path = U17Mine;
 			sourceTree = "<group>";
 		};
 		CFA34B3020F7234400419D6A /* Recommend */ = {
@@ -1212,6 +1320,8 @@
 				CF55832820FDCC08008EE5A1 /* U17FooterView.swift */,
 				CF55832D20FDD690008EE5A1 /* U17Model.swift */,
 				CF55832F20FDD6A2008EE5A1 /* U17Api.swift */,
+				CF85C0702105E0B100A740ED /* U17Mine */,
+				CF1F92FC2105837E001C16C5 /* U17Today */,
 				CF55833820FDED58008EE5A1 /* U17Books */,
 				CF55832A20FDD0B5008EE5A1 /* U17RankList */,
 				CF55830920FD8372008EE5A1 /* U17Recommend */,
@@ -1226,6 +1336,8 @@
 		CFD006AF20C62FC900DBC6E8 /* Librartys */ = {
 			isa = PBXGroup;
 			children = (
+				CF1537A52106C6D200165E9F /* ParallaxHeader */,
+				CF029BA92104334200BE195C /* yh_navgation */,
 				CF33789221002CA100381606 /* WRNavigationBar */,
 				CFD006C420C632BD00DBC6E8 /* HHGuidePageHUD */,
 			);
@@ -1683,6 +1795,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeMenuViewController/SwipeMenuViewController.framework",
@@ -1700,6 +1813,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeMenuViewController.framework",
@@ -1732,11 +1846,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF029BA621042AF500BE195C /* YYProvider.swift in Sources */,
 				CF33789B21002CA100381606 /* WRProxy.swift in Sources */,
 				CFA3D1AE20F5E98300D25A73 /* U17SubController.swift in Sources */,
 				CF55833A20FDED7E008EE5A1 /* U17BooksViewController.swift in Sources */,
 				CF269D5620F8986D002D12CE /* IkonBannerView.swift in Sources */,
 				CF5DEFDC20FF2A7D005E047E /* U17BooksGuideController.swift in Sources */,
+				CF4E26D12102DFCC009C0F57 /* U17WebViewController.swift in Sources */,
 				CF55832020FDC23D008EE5A1 /* VIPAndSubCell.swift in Sources */,
 				CF3378AB2100742200381606 /* GuessLikeCell.swift in Sources */,
 				CF0A72E2210186DB00CB6511 /* U17OtherBooksController.swift in Sources */,
@@ -1751,6 +1867,7 @@
 				CF0A72E4210189BD00CB6511 /* U17OtherWorksCell.swift in Sources */,
 				CF269D5920F898E5002D12CE /* IkonCollectionCell.swift in Sources */,
 				CFA3D1A320F5DD3000D25A73 /* IkonController.swift in Sources */,
+				CF1537AA2106C6D200165E9F /* UIScrollView+ParallaxHeader.swift in Sources */,
 				CF55832C20FDD0F8008EE5A1 /* U17RankListViewController.swift in Sources */,
 				CF5DEFE520FF40CA005E047E /* YYFourController.swift in Sources */,
 				CF33789F21002E1300381606 /* YYNavigationController.swift in Sources */,
@@ -1760,22 +1877,34 @@
 				CF3378B52100816700381606 /* BooksCommendCell.swift in Sources */,
 				CF557F6F20FC488A008EE5A1 /* RecommendHeaderView.swift in Sources */,
 				CF3378B32100779000381606 /* GuideCollectionHeaderView.swift in Sources */,
+				CF85C0742105E1EA00A740ED /* U17MineCell.swift in Sources */,
+				CF85C0722105E0C700A740ED /* U17MineViewController.swift in Sources */,
 				CF33789C21002CA100381606 /* WRCycleScrollView.swift in Sources */,
 				CF55830F20FD8413008EE5A1 /* U17RecommendHeaderView.swift in Sources */,
+				CF029BB6210482C100BE195C /* YYIrregularityContentView.swift in Sources */,
 				CFA3D1A120F5DD1200D25A73 /* RecommendController.swift in Sources */,
+				CF1F92FE21058948001C16C5 /* U17TodayCell.swift in Sources */,
 				CF3378A5210073BA00381606 /* BookIntroduceCell.swift in Sources */,
+				CF029BA821042BF600BE195C /* YYSecondViewController.swift in Sources */,
 				CF3378A7210073E900381606 /* OtherBooksCell.swift in Sources */,
+				CF1F930421059E83001C16C5 /* U17TodayHeaderView.swift in Sources */,
 				CF55832E20FDD690008EE5A1 /* U17Model.swift in Sources */,
+				CF1F92FB21058379001C16C5 /* U17TodayViewController.swift in Sources */,
 				CF5DEFE420FF40CA005E047E /* YYFiveController.swift in Sources */,
+				CF1537AB2106C6D200165E9F /* ParallaxHeader.swift in Sources */,
 				CFA3D1B220F5FB1F00D25A73 /* U17SearchController.swift in Sources */,
 				CF557F6B20FC359E008EE5A1 /* RecommendHotCircleCell.swift in Sources */,
 				CF55833020FDD6A2008EE5A1 /* U17Api.swift in Sources */,
 				CF5D06F520C6294000DA0F77 /* ViewController.swift in Sources */,
+				CF029BAE2104334200BE195C /* UINavigationBar+YHIndicatorImage.m in Sources */,
 				CF557F6720FC3549008EE5A1 /* RecommendBannerViewCell.swift in Sources */,
 				CF33789D21002CA100381606 /* WRCycleCell.swift in Sources */,
 				CFA3D1A520F5DD5200D25A73 /* EssayController.swift in Sources */,
+				CF85C0762105E27400A740ED /* U17MineHeaderView.swift in Sources */,
 				CFA34B3720F734C000419D6A /* RecommendGridView.swift in Sources */,
 				CFA3D1AA20F5E94400D25A73 /* U17RecommendController.swift in Sources */,
+				CF029BB4210480D700BE195C /* XMLYViewController.swift in Sources */,
+				CF1537A92106C6D200165E9F /* ParallaxHeaderMode.swift in Sources */,
 				CF21589F20F8628F007A4706 /* YYCollectionFlowLayout.swift in Sources */,
 				CF5DEFDA20FF2A4C005E047E /* U17BooksDetailController.swift in Sources */,
 				CF3378A92100740900381606 /* TicketCell.swift in Sources */,
@@ -1787,12 +1916,17 @@
 				CFA3D19D20F5CAC200D25A73 /* ACGViewController.swift in Sources */,
 				CF55831A20FD84C4008EE5A1 /* U17RecommendTopicCell.swift in Sources */,
 				CFA3D1A720F5DD5C00D25A73 /* COSController.swift in Sources */,
+				CF4E26D32102E394009C0F57 /* U17ReadViewController.swift in Sources */,
+				CF029BAF2104334200BE195C /* UINavigationController+YHBackTitle.m in Sources */,
+				CF4E26D52102E640009C0F57 /* U17ReadCell.swift in Sources */,
 				CF5DEFDE20FF2ABA005E047E /* U17BooksCommendController.swift in Sources */,
 				CF5D06F320C6294000DA0F77 /* AppDelegate.swift in Sources */,
 				CF557F6920FC3580008EE5A1 /* RecommendHotTopicCell.swift in Sources */,
 				CF3378B12100777B00381606 /* GuideCollectionCell.swift in Sources */,
 				CF5DEFE620FF40CA005E047E /* YYThirdController.swift in Sources */,
+				CF1F93062105A501001C16C5 /* U17TodayFooterCell.swift in Sources */,
 				CF55833C20FDFB7F008EE5A1 /* U17YTDRankCell.swift in Sources */,
+				CF1F930221059D7C001C16C5 /* U17TodayFooterView.swift in Sources */,
 				CF0A72E62101CF3600CB6511 /* U17MoreBooksController.swift in Sources */,
 				CF21589120F85744007A4706 /* RecommendCell.swift in Sources */,
 				CFD006DD20C63F7700DBC6E8 /* U17Controller.swift in Sources */,
@@ -1968,6 +2102,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 975N9Y458Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YYSwiftProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1985,6 +2123,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 975N9Y458Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YYSwiftProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

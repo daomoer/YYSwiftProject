@@ -39,8 +39,8 @@ class U17RankListViewController: UIViewController,UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
         loadData(more: false)
-        self.view.addSubview(self.tableView)
     }
     
     @objc private func loadData(more: Bool) {
@@ -56,6 +56,7 @@ class U17RankListViewController: UIViewController,UITableViewDataSource, UITable
                                     
                                     if more == false { self?.comicList.removeAll() }
                                     self?.comicList.append(contentsOf: returnData?.comics ?? [])
+                                    self?.view.addSubview((self?.tableView)!)
                                     self?.tableView.reloadData()
                                     
                                     guard let defaultParameters = returnData?.defaultParameters else { return }
@@ -66,7 +67,7 @@ class U17RankListViewController: UIViewController,UITableViewDataSource, UITable
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comicList.count
+        return self.comicList.count 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

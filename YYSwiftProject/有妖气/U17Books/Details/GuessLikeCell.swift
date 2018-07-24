@@ -9,6 +9,11 @@
 import UIKit
 
 class GuessLikeCell: UITableViewCell {
+    lazy var titleLabel : UILabel = {
+        let label = UILabel.init(frame: CGRect(x:0, y:0 ,width: YYScreenWidth, height:40))
+        label.text = "  猜你喜欢"
+        return label
+    }()
     lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
         layout.sectionInset = UIEdgeInsetsMake(0, 5, 5, 5)
@@ -16,7 +21,7 @@ class GuessLikeCell: UITableViewCell {
         layout.minimumLineSpacing = 8
         layout.scrollDirection = UICollectionViewScrollDirection.horizontal
         layout.itemSize = CGSize(width: YYScreenWidth/4, height:180)
-        let collectionView = UICollectionView.init(frame:CGRect(x:0, y:0, width:YYScreenWidth, height:180), collectionViewLayout: layout)
+        let collectionView = UICollectionView.init(frame:CGRect(x:0, y:40, width:YYScreenWidth, height:180), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = UIColor.white
@@ -29,6 +34,7 @@ class GuessLikeCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.addSubview(self.titleLabel)
         self.addSubview(self.collectionView)
     }
     

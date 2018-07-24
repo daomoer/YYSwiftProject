@@ -12,6 +12,7 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Result (3.2.4)
+  - SkeletonView (1.2)
   - SnapKit (4.0.0)
   - SVProgressHUD (2.2.5)
   - SwiftMessages (4.1.4):
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - Kingfisher
   - MJRefresh
   - Moya
+  - SkeletonView
   - SnapKit
   - SVProgressHUD
   - SwiftMessages
@@ -46,12 +48,13 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SkeletonView: d68962d45d1af038f6a110d2274b183df8f82752
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwipeMenuViewController: 43c74a4167956e558ff375d4ac3b8d84c7c5485c
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 011ae05cf756bc8ef71069bc17438c7446619f9e
+PODFILE CHECKSUM: 79ace3f1579601b1c2ccb28c5b1f248430d5c362
 
 COCOAPODS: 1.3.1

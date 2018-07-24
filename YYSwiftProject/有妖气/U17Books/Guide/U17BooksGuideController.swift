@@ -68,6 +68,12 @@ class U17BooksGuideController: UIViewController, UICollectionViewDelegateFlowLay
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = isPositive ? indexPath.row : ((detailStatic?.chapter_list?.count)! - indexPath.row - 1)
+        let vc = U17ReadViewController(detailStatic: detailStatic, selectIndex: index)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize.init(width: YYScreenHeigth, height:40)
     }

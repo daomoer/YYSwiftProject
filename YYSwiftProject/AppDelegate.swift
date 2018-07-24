@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let nav = self.customBouncesStyle()
+        let nav = UINavigationController.init(rootViewController: ViewController())
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
-        
+
         // 静态图片引导页
         self.setStaticGuidePage()
         // 动态图片引导页
@@ -47,42 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController?.view.addSubview(guideView)
     }
     
-    
-     func customBouncesStyle() -> UINavigationController {
-        let tabBarController = ESTabBarController()
-        let v1 = ACGViewController()
-        let v2 = U17Controller()
-        let v3 = YYThirdController()
-        let v4 = YYFourController()
-        let v5 = YYFiveController()
-        v1.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "二次元", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
-        v2.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "有妖气", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
-        v3.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Photo", image: UIImage(named: "photo"), selectedImage: UIImage(named: "photo_1"))
-        v4.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Favor", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
-        v5.tabBarItem = ESTabBarItem.init(YYBouncesContentView(), title: "Me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
-        tabBarController.viewControllers = [v1, v2, v3, v4, v5]
-//        tabBarController.title = "swift学习集合"
-        let navigationController = YYNavigationController.init(rootViewController: tabBarController)
-        setNavBarAppearence()
-        return navigationController
-    }
-    
-    func setNavBarAppearence()
-    {
-        // 设置导航栏默认的背景颜色
-        WRNavigationBar.defaultNavBarBarTintColor = DominantColor
-        // 设置导航栏所有按钮的默认颜色
-        WRNavigationBar.defaultNavBarTintColor = .white
-        // 设置导航栏标题默认颜色
-        WRNavigationBar.defaultNavBarTitleColor = .white
-        // 统一设置状态栏样式
-        WRNavigationBar.defaultStatusBarStyle = .lightContent
-        // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
-        WRNavigationBar.defaultShadowImageHidden = true
-        
-        
-    }
-    
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

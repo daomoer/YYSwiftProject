@@ -10,10 +10,14 @@ import UIKit
 import FSPagerView
 // 创建闭包
 typealias U17GridBtnClick = (_ tag : Int) ->Void
+// 创建闭包
+typealias U17BannerClick = (_ tag : Int) ->Void
 
 class U17BannerViewCell: UICollectionViewCell,FSPagerViewDelegate, FSPagerViewDataSource {
 
     var u17GridBtnClick :  U17GridBtnClick?
+    var u17BannerClick :  U17BannerClick?
+
     
     lazy var pagerView = FSPagerView()
     lazy var pageControl = FSPageControl()
@@ -81,7 +85,10 @@ class U17BannerViewCell: UICollectionViewCell,FSPagerViewDelegate, FSPagerViewDa
         return cell
     }
     
+    
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        guard let u17BannerClick = self.u17BannerClick else { return }
+        u17BannerClick(index)
         pagerView.deselectItem(at: index, animated: true)
         pagerView.scrollToItem(at: index, animated: true)
         self.pageControl.currentPage = index

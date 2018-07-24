@@ -62,6 +62,7 @@ enum UApi {
     case searchRelative(inputText: String)//相关搜索
     case searchResult(argCon: Int, q: String)//搜索结果
     
+    case todayList//今日列表
     case boutiqueList(sexType: Int)//推荐列表
     case special(argCon: Int, page: Int)//专题
     case vipList//VIP列表
@@ -93,7 +94,8 @@ extension UApi: TargetType {
         case .searchHot: return "search/hotkeywordsnew"
         case .searchRelative: return "search/relative"
         case .searchResult: return "search/searchResult"
-            
+        
+        case .todayList: return "comic/todayRecommend"
         case .boutiqueList: return "comic/boutiqueListNew"
         case .special: return "comic/special"
         case .vipList: return "list/vipList"
@@ -129,7 +131,7 @@ extension UApi: TargetType {
         case .searchResult(let argCon, let q):
             parmeters["argCon"] = argCon
             parmeters["q"] = q
-            
+        
         case .boutiqueList(let sexType):
             parmeters["sexType"] = sexType
             parmeters["v"] = 3320101
@@ -198,3 +200,6 @@ extension MoyaProvider {
     }
 }
 
+
+/*http://app.u17.com/v3/appV3_3/ios/phone/comic/todayRecommend?device_id=2E70578E-025C-436B-85D6-D6989727A189&model=iPhone%206%20Plus&systemVersion=11.2.6&target=U17_3.0&time=1532314546&version=4.1.2
+ */

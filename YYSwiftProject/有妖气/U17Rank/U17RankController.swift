@@ -52,7 +52,7 @@ class U17RankController: UIViewController,UICollectionViewDataSource, UICollecti
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell:U17RankCell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier, for: indexPath) as! U17RankCell
-            cell.model = rankList[indexPath.row]
+            cell.model = rankList[indexPath.section]
             return cell
         }
     

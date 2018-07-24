@@ -19,6 +19,8 @@ def pods
     pod 'SwipeMenuViewController'
     pod 'MJRefresh'
 
+    pod 'SkeletonView'
+
 end
 
 target 'YYSwiftProject' do

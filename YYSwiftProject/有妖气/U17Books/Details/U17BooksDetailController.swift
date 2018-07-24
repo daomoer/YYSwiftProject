@@ -51,9 +51,7 @@ class U17BooksDetailController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.addSubview(self.tableView)
     }
-    
 
     
     
@@ -69,7 +67,7 @@ class U17BooksDetailController: UIViewController, UITableViewDelegate, UITableVi
         if indexPath.section == 0 {
             return BookIntroduceCell.height(for: detailStatic)
         }else if indexPath.section == 3 {
-            return 180
+            return 220
         }else {
             return 44
         }

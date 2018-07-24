@@ -84,6 +84,20 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: U17BannerViewCellIdentifier, for: indexPath) as! U17BannerViewCell
             cell.imagePaths = self.galleryItems.filter { $0.cover != nil }.map { $0.cover! }
             cell.comicListModel = comicLists[indexPath.section]
+            cell.u17BannerClick  = {[weak self](index) in
+                let item = self?.galleryItems[index]
+                if item?.linkType == 2 {
+                    guard let url = item?.ext?.flatMap({ return $0.key == "url" ? $0.val : nil }).joined() else { return }
+                     let vc = U17WebViewController(url: url)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    guard let comicIdString = item?.ext?.flatMap({ return $0.key == "comicId" ? $0.val : nil }).joined(),
+                        let comicId = Int(comicIdString) else { return }
+                    let vc = U17BooksViewController(comicid: comicId, titleStr:"北极")
+                   self?.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            
             cell.u17GridBtnClick = {[weak self](index) in
                 let model:ComicModel = comicList.comics![index]
                 
@@ -177,19 +191,14 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
             headerView.titleL.text = comicList.itemTitle
             // 每个分区header右侧点击更多按钮
             headerView.headerMoreBtnClick = {[weak self]() in
-                if indexPath.section == 2 {
-                    
-                }else if indexPath.section == 4 {
-                    
-                }else if indexPath.section == 5 {// 带前三名排行
-                    let comicList:ComicListModel = (self?.comicLists[indexPath.section])!
-                    let vc = U17RankListViewController(argCon: comicList.argCon,
-                                                       argName:comicList.argName,
-                                                       argValue:comicList.argValue)
-                    vc.title = comicList.itemTitle
+                if indexPath.section == 3 {
+                
+                }else if indexPath.section == 5 {
+
+                }else if indexPath.section == 7 {
+                    let vc = U17WebViewController(url: "http://m.u17.com/wap/cartoon/list")
+                    vc.title = "动画"
                     self?.navigationController?.pushViewController(vc, animated: true)
-                }else if indexPath.section == 6 {
-                    
                 }else {
                     let comicList:ComicListModel = (self?.comicLists[indexPath.section])!
                     let vc = U17MoreBooksController(argCon: comicList.argCon,

@@ -18,23 +18,23 @@ class U17Controller: SwipeMenuViewController {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(true)
         self.navigationController?.navigationBar.isHidden = false
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navBarBackgroundAlpha = 0
         for vc in vcs{
             self.addChildViewController(vc)
         }
         
         self.view.backgroundColor = DominantColor
         self.options.tabView.style = .segmented
-        self.options.tabView.itemView.textColor = UIColor.gray
+        self.options.tabView.itemView.textColor = UIColor.init(red: 200/255.0, green: 200/255.0, blue: 200/255.0, alpha: 1)
         self.options.tabView.itemView.selectedTextColor = UIColor.white
-//        self.options.tabView.backgroundColor = DominantColor
         self.options.tabView.itemView.width = 60.0
         self.options.tabView.margin = 70.0
         self.options.tabView.itemView.font = UIFont.systemFont(ofSize: 20)
