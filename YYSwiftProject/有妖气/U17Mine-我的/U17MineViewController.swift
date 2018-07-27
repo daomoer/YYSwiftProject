@@ -39,7 +39,7 @@ class U17MineViewController: UIViewController {
                  ["icon":"mine_mail", "title": "我要反馈"],
                  ["icon":"mine_judge", "title": "给我们评分"],
                  ["icon":"mine_author", "title": "成为作者"],
-                 ["icon":"mine_setting", "title": "设置"]]]
+                 ["icon":"mine_setting", "title": "退出有妖气"]]]
     }()
 
     override func viewWillAppear(_ animated: Bool) {
@@ -97,5 +97,11 @@ extension U17MineViewController : UITableViewDelegate, UITableViewDataSource {
         cell.imageView?.image =  UIImage(named: dict["icon"] ?? "")
         cell.textLabel?.text = dict["title"]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 && indexPath.row == 4  {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

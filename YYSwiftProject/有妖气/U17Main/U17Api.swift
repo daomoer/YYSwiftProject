@@ -35,11 +35,7 @@ let LoadingPlugin = NetworkActivityPlugin { (type, target) in
     switch type {
     case .began:
         SVProgressHUD.show()
-        
-//        SVProgressHUD.hide(for: vc.view, animated: false)
-//        SVProgressHUD.showAdded(to: vc.view, animated: true)
     case .ended:
-//        SVProgressHUD.hide(for: vc.view, animated: true)
         SVProgressHUD.dismiss()
     }
 }
@@ -201,5 +197,3 @@ extension MoyaProvider {
 }
 
 
-/*http://app.u17.com/v3/appV3_3/ios/phone/comic/todayRecommend?device_id=2E70578E-025C-436B-85D6-D6989727A189&model=iPhone%206%20Plus&systemVersion=11.2.6&target=U17_3.0&time=1532314546&version=4.1.2
- */

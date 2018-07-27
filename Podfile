@@ -14,6 +14,7 @@ def pods
     pod 'IQKeyboardManagerSwift'
     pod 'Moya'
     pod 'HandyJSON'
+    pod 'SwiftyJSON'
     pod 'SwiftMessages'
     # 分页
     pod 'SwipeMenuViewController'

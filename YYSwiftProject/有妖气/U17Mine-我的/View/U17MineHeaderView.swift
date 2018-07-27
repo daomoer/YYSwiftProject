@@ -98,9 +98,8 @@ class U17MineHeaderView: UITableViewHeaderFooterView {
 
 }
 
-
-
 private class TagView: UIView {
+    
     private let titleArray = ["妖气币","阅读劵","月票"]
     lazy var lineView : UIView = {
        let view = UIView()
@@ -117,13 +116,18 @@ private class TagView: UIView {
     
     lazy var signBtn : UIButton = {
        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("签到", for: UIControlState.normal)
+        button.setTitle("退出", for: UIControlState.normal)
         button.backgroundColor = DominantColor
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 15
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        button.addTarget(self, action: #selector(goOutBtnClick(button:)), for: UIControlEvents.touchUpInside)
         return button
     }()
+    
+    @objc func goOutBtnClick(button:UIButton){
+
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

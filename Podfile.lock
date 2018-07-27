@@ -18,6 +18,7 @@ PODS:
   - SwiftMessages (4.1.4):
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
+  - SwiftyJSON (4.1.0)
   - SwipeMenuViewController (2.1.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - SnapKit
   - SVProgressHUD
   - SwiftMessages
+  - SwiftyJSON
   - SwipeMenuViewController
   - YYKit
 
@@ -52,9 +54,10 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   SwipeMenuViewController: 43c74a4167956e558ff375d4ac3b8d84c7c5485c
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 79ace3f1579601b1c2ccb28c5b1f248430d5c362
+PODFILE CHECKSUM: d2057733c113902a4093d6fb67b8877d309a73ef
 
 COCOAPODS: 1.3.1

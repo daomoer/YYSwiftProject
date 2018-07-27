@@ -1,18 +1,18 @@
 //
-//  XMLYViewController.swift
+//  HomeBaseViewController.swift
 //  YYSwiftProject
 //
-//  Created by Domo on 2018/7/22.
+//  Created by Domo on 2018/7/24.
 //  Copyright © 2018年 知言网络. All rights reserved.
 //
 
 import UIKit
-
-class XMLYViewController: UIViewController {
+// 首页父视图控制器
+class HomeBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+
         // Do any additional setup after loading the view.
     }
 

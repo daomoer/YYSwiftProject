@@ -97,22 +97,22 @@ enum YYProvider {
             }
         }
         
-        let v1 = XMLYViewController()
+        let v1 = HomeRecommendController()
         let v2 = YYSecondViewController()
         let v3 = YYThirdController()
         let v4 = YYFourController()
         let v5 = YYFiveController()
         
-        v1.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "Home", image: UIImage(named: "tabbar_me_n"), selectedImage: UIImage(named: "tabbar_me_h"))
-        v2.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "Find", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
+        v1.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
+        v2.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我听", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
         v3.tabBarItem = ESTabBarItem.init(YYIrregularityContentView(), title: nil, image: UIImage(named: "photo_verybig"), selectedImage: UIImage(named: "photo_verybig"))
-        v4.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "Favor", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
-        v5.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "Me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
+        v4.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
+        v5.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我的", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
         
         tabBarController.viewControllers = [v1, v2, v3, v4, v5]
         
         let navigationController = YYNavigationController.init(rootViewController: tabBarController)
-        tabBarController.title = "喜玛拉雅"
+        tabBarController.title = "喜马拉雅"
         return navigationController
     }
     

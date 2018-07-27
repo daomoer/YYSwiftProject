@@ -18,8 +18,8 @@ class VerticalRecommendCell: UICollectionViewCell {
         // Initialization code
     }
     
-    var model: ComicModel? {
-        didSet {
+    var model: ComicModel?{
+        didSet { 
             guard let model = model else { return }
             picImage.kf.setImage(with: URL(string : model.cover!))
             mainTitleLabel.text = model.name ?? model.title

@@ -13,15 +13,6 @@ class YYSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        self.view.backgroundColor = UIColor.white
-        ApiLoadingProvider.request(UApi.todayList, model: DayDataModel.self) { [weak self] (returnData) in
-//            self?.galleryItems = returnData?.galleryItems ?? []
-//            self?.TextItems = returnData?.textItems ?? []
-//            self?.comicLists = returnData?.comicLists ?? []
-//
-//            self?.collectionView.uHead.endRefreshing()
-//
-//            self?.collectionView.reloadData()
-        }
     }
 
     override func didReceiveMemoryWarning() {
