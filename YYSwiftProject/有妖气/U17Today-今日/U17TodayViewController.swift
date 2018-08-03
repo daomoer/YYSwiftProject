@@ -38,12 +38,12 @@ class U17TodayViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidLoad() {
@@ -52,7 +52,6 @@ class U17TodayViewController: UIViewController {
         self.view.backgroundColor = UIColor.init(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
         self.view.addSubview(self.navStatusView)
         self.view.addSubview(self.tableView)
-        
         loadData()
     }
     

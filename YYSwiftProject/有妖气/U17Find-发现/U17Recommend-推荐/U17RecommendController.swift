@@ -120,12 +120,16 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
         }
         else if indexPath.section == 4 || indexPath.section == 6 || indexPath.section == 8 || indexPath.section == 9 || indexPath.section == 10{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalRecommendCellIdentifier, for: indexPath) as! VerticalRecommendCell
-            cell.model = comicList.comics?[indexPath.row]
+            if comicList.comics?.count == 3{
+                cell.model = comicList.comics?[indexPath.row]
+            }
             return cell
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlcrossRecommendCellIdentifier, for: indexPath) as! AlcrossRecommendCell
             cell.backgroundColor = UIColor.white
-            cell.model = comicList.comics?[indexPath.row]
+            if comicList.comics?.count == 2 {
+                cell.model = comicList.comics?[indexPath.row]
+            }
             return cell
         }
     }
@@ -164,9 +168,11 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
             return CGSize.init(width:YYScreenWidth/2-3,height:150)
         }else if indexPath.section == 3{
             return CGSize.init(width:YYScreenWidth/2-3,height:120)
-        }else if indexPath.section == 4 || indexPath.section == 6 || indexPath.section == 8 || indexPath.section == 9 || indexPath.section == 10{
+        }else if indexPath.section == 4 || indexPath.section == 6 || indexPath.section == 9 || indexPath.section == 10{
             return CGSize.init(width:YYScreenWidth/3-4,height:220)
-        }else{
+        }else if indexPath.section == 8{
+            return .zero
+        }else {
             return CGSize.init(width:YYScreenWidth/2-3,height:150)
         }
     }
@@ -187,8 +193,10 @@ class U17RecommendController: UIViewController ,UICollectionViewDataSource, UICo
         if kind == UICollectionElementKindSectionHeader {
             let headerView : U17RecommendHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: U17RecommendHeaderViewIdentifier, for: indexPath) as! U17RecommendHeaderView
             let comicList:ComicListModel = comicLists[indexPath.section]
-            headerView.imageView.kf.setImage(with:URL(string:comicList.newTitleIconUrl!))
-            headerView.titleL.text = comicList.itemTitle
+            if (comicList.itemTitle != nil) {
+                headerView.titleL.text = comicList.itemTitle
+                headerView.imageView.kf.setImage(with:URL(string:comicList.newTitleIconUrl!))
+            }
             // 每个分区header右侧点击更多按钮
             headerView.headerMoreBtnClick = {[weak self]() in
                 if indexPath.section == 3 {

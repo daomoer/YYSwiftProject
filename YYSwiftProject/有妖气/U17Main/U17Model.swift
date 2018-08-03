@@ -135,6 +135,61 @@ struct dayComicItemModel: HandyJSON {
     var chapterCount: Int = 0
 }
 
+struct ReadHistoryModel: HandyJSON {
+    var user_id:String?
+    var author_id:String?
+    var author_name:String?
+    var comic_id:String?
+    var comic_name:String?
+    var cate_id:String?
+    var comic_cover:String?
+    var create_time:String?
+    var first_letter:String?
+    var is_vip:String?
+    var sort:Int = 0
+    var last_read_chapter_id:String?
+    var last_read_chapter_name:String?
+    var last_read_time:String?
+    var last_read_chapter_index: Int = 0
+    var is_view: String?
+    var chapterBuyed: Int = 0
+    var chapterPrice: String?
+    var chapterType: String?
+    var last_read_image_id: String?
+    var pass_chapter_num:String?
+    var last_update_chapter_id: String?
+    var last_update_chapter_name: String?
+    var last_update_time:String?
+}
+
+struct favListModel: HandyJSON {
+   var favList: [FavList]?
+}
+
+struct FavList: HandyJSON {
+    var series_status: Int = 0
+    var comic_id: String?
+    var create_time: String?
+    var name: String?
+    var cover: String?
+    var author_id: String?
+    var author_name: String?
+    var cate_id: String?
+    var last_update_time: String?
+    var first_letter: String?
+    var last_update_chapter_name: String?
+    var last_update_chapter_id: String?
+    var pass_chapter_num: String?
+    var status: String?
+    var fav_time: String?
+    var flag: Int = 0
+    var groups: String?
+    var user_id: String?
+    var last_read_time: String?
+    var last_read_chapter_id: String?
+    var last_read_image_id: String?
+    var sort: Int = 0
+}
 
 struct ComicRealtimeModel: HandyJSON {
     var comic_id: Int = 0

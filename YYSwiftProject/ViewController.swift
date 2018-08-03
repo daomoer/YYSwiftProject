@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         return tabView
     }()
     
-    private let titleArray = ["有妖气漫画", "网易二次元", "喜马拉雅"]
+    private let titleArray = ["有妖气漫画", "网易二次元"]
     
 
     override func viewDidLoad() {
@@ -44,10 +44,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource, UITabBarC
         switch indexPath.row {
         case 0:
             self.present(YYProvider.customBouncesStyle(), animated: true, completion: nil)
-        case 1:
-            self.present(YYProvider.tabbarWithNavigationStyle(), animated: true, completion: nil)
         default:
-            self.present(YYProvider.customIrregularityStyle(delegate: nil), animated: true, completion: nil)
+            self.present(YYProvider.tabbarWithNavigationStyle(), animated: true, completion: nil)
         }
     }
 }

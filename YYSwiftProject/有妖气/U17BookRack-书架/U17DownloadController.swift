@@ -1,14 +1,14 @@
 //
-//  HomeBaseViewController.swift
+//  U17DownloadController.swift
 //  YYSwiftProject
 //
-//  Created by Domo on 2018/7/24.
+//  Created by Domo on 2018/7/29.
 //  Copyright © 2018年 知言网络. All rights reserved.
 //
 
 import UIKit
-// 首页父视图控制器
-class HomeBaseViewController: UIViewController {
+
+class U17DownloadController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

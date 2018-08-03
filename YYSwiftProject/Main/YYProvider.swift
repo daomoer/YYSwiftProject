@@ -69,52 +69,5 @@ enum YYProvider {
         return tabBarController
     }
     
-    
-    static func customIrregularityStyle(delegate: UITabBarControllerDelegate?) -> YYNavigationController {
-        let tabBarController = ESTabBarController()
-        tabBarController.delegate = delegate
-        tabBarController.title = "Irregularity"
-        tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
-        tabBarController.shouldHijackHandler = {
-            tabbarController, viewController, index in
-            if index == 2 {
-                return true
-            }
-            return false
-        }
-        tabBarController.didHijackHandler = {
-            [weak tabBarController] tabbarController, viewController, index in
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
-                let takePhotoAction = UIAlertAction(title: "Take a photo", style: .default, handler: nil)
-                alertController.addAction(takePhotoAction)
-                let selectFromAlbumAction = UIAlertAction(title: "Select from album", style: .default, handler: nil)
-                alertController.addAction(selectFromAlbumAction)
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                alertController.addAction(cancelAction)
-                tabBarController?.present(alertController, animated: true, completion: nil)
-            }
-        }
-        
-        let v1 = HomeRecommendController()
-        let v2 = YYSecondViewController()
-        let v3 = YYThirdController()
-        let v4 = YYFourController()
-        let v5 = YYFiveController()
-        
-        v1.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
-        v2.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我听", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
-        v3.tabBarItem = ESTabBarItem.init(YYIrregularityContentView(), title: nil, image: UIImage(named: "photo_verybig"), selectedImage: UIImage(named: "photo_verybig"))
-        v4.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "发现", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
-        v5.tabBarItem = ESTabBarItem.init(YYIrregularityBasicContentView(), title: "我的", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
-        
-        tabBarController.viewControllers = [v1, v2, v3, v4, v5]
-        
-        let navigationController = YYNavigationController.init(rootViewController: tabBarController)
-        tabBarController.title = "喜马拉雅"
-        return navigationController
-    }
-    
 
 }

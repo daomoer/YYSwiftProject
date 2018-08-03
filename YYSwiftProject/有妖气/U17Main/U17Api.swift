@@ -58,7 +58,9 @@ enum UApi {
     case searchRelative(inputText: String)//相关搜索
     case searchResult(argCon: Int, q: String)//搜索结果
     
+    case favList //收藏列表
     case todayList//今日列表
+    case historyList // 阅读历史列表
     case boutiqueList(sexType: Int)//推荐列表
     case special(argCon: Int, page: Int)//专题
     case vipList//VIP列表
@@ -91,7 +93,9 @@ extension UApi: TargetType {
         case .searchRelative: return "search/relative"
         case .searchResult: return "search/searchResult"
         
+        case .favList: return "fav/index"
         case .todayList: return "comic/todayRecommend"
+        case .historyList: return "read/readhistory"
         case .boutiqueList: return "comic/boutiqueListNew"
         case .special: return "comic/special"
         case .vipList: return "list/vipList"

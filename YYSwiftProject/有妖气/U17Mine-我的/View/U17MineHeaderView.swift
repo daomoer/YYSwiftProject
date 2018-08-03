@@ -62,8 +62,8 @@ class U17MineHeaderView: UITableViewHeaderFooterView {
         
         self.addSubview(self.tagView)
         self.tagView.snp.makeConstraints { (make) in
-            make.left.right.equalTo(15)
-            make.right.equalTo(-15)
+            make.left.equalTo(15)
+            make.right.equalToSuperview().offset(-15)
             make.bottom.equalTo(-15)
             make.height.equalTo(120)
         }
