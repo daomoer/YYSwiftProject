@@ -882,6 +882,13 @@
 			path = "U17Today-今日";
 			sourceTree = "<group>";
 		};
+		CF2B31FC211A87D9004D5B95 /* 效果图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "效果图";
+			sourceTree = "<group>";
+		};
 		CF33789221002CA100381606 /* WRNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,6 +1383,7 @@
 		CFA3D1A820F5DECC00D25A73 /* 有妖气 */ = {
 			isa = PBXGroup;
 			children = (
+				CF2B31FC211A87D9004D5B95 /* 效果图 */,
 				CF1537B52106EA3900165E9F /* U17Main */,
 				CF1F92FC2105837E001C16C5 /* U17Today-今日 */,
 				CF1537AE2106DBA800165E9F /* U17Find-发现 */,
