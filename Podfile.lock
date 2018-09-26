@@ -2,7 +2,7 @@ PODS:
   - Alamofire (4.7.2)
   - ESTabBarController-swift (2.6.2)
   - FSPagerView (0.7.1)
-  - HandyJSON (4.1.1)
+  - HandyJSON (4.2.0)
   - IQKeyboardManagerSwift (6.0.3)
   - Kingfisher (4.8.0)
   - MJRefresh (3.1.15.3)
@@ -27,7 +27,7 @@ PODS:
 DEPENDENCIES:
   - ESTabBarController-swift
   - FSPagerView
-  - HandyJSON
+  - HandyJSON (~> 4.2.0)
   - IQKeyboardManagerSwift
   - Kingfisher
   - MJRefresh
@@ -40,11 +40,30 @@ DEPENDENCIES:
   - SwipeMenuViewController
   - YYKit
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ESTabBarController-swift
+    - FSPagerView
+    - HandyJSON
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - Result
+    - SkeletonView
+    - SnapKit
+    - SVProgressHUD
+    - SwiftMessages
+    - SwiftyJSON
+    - SwipeMenuViewController
+    - YYKit
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   ESTabBarController-swift: f0a8679e43df1e60b7b36bbcaf1dc98ba6273c7d
   FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
-  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
@@ -58,6 +77,6 @@ SPEC CHECKSUMS:
   SwipeMenuViewController: 43c74a4167956e558ff375d4ac3b8d84c7c5485c
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d2057733c113902a4093d6fb67b8877d309a73ef
+PODFILE CHECKSUM: 6c5aa471f64deb0b3bb737e9b1d9562f62106b48
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

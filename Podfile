@@ -13,7 +13,7 @@ def pods
     pod 'FSPagerView'
     pod 'IQKeyboardManagerSwift'
     pod 'Moya'
-    pod 'HandyJSON'
+    pod 'HandyJSON', '~> 4.2.0'
     pod 'SwiftyJSON'
     pod 'SwiftMessages'
     # 分页
