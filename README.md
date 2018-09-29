@@ -5,4 +5,4 @@
 ![效果图](https://github.com/daomoer/YYSwiftProject/blob/master/YYSwiftProject/有妖气/效果图/QQ20180808-093047.gif)
 
 关于本项目一些分析总结请看简书文章
-简书地址：https://www.jianshu.com/p/4b8e46ee1f39
+掘金地址：https://juejin.im/post/5b7135db6fb9a009a257e557
